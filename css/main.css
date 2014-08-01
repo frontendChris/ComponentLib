@@ -1,22 +1,85 @@
 /* ==========================================================================
    Page Structure
 	   3 x layouts
-	   1. Standard Center Aligned
-	   2. Side Nav
-	   3. Full Width
+	   1. Standard Center Aligned -- layout_center
+	   2. Side Nav -- layout_side
+	   3. Full Width -- layout_full
    ========================================================================== */
 
+    .layout_center {} /* inclide this class on the body tag to implement this layout */
+
+   		.layout_center .page_container_outer {
+   			width: 100%;
+   		}
+
+	   		.layout_center .page_container_inner {
+	   			width: 960px; /* change size as required by project */
+	   			margin: auto;
+	   		}
+
+    
+
+    .layout_side {} /* inclide this class on the body tag to implement this layout */
+   		
+   		.layout_side .page_container_outer {
+   			width: 100%;
+   		}
+
+	   		.layout_side .page_container_inner {
+	   			width: 100%;
+	   		}
+
+    
+
+    .layout_full {} /* inclide this class on the body tag to implement this layout */
+
+   		.layout_full .page_container_outer {
+   			width: 100%;
+   		}
+
+	   		.layout_full .page_container_inner {
+	   			margin: 0 20px; /* set gutter to left & right of content */
+	   		}
 
 
 /* ==========================================================================
    Basic Html Elements
    ========================================================================== */
 
+   /* ======== Forms ======== */
+
+   /* ======== Buttons ======== */
+
+   /* ======== Fonts ======== */
+
+   /* ======== Lists ======== */
+
+   /* ======== Tables ======== */
+
+   /* ======== Images ======== */
 
 /* ==========================================================================
    Html Components
    ========================================================================== */
 
+   /* ======== Navigation ======== */
+
 /* ==========================================================================
    Js Components
    ========================================================================== */
+
+   /* ======== Tabs ======== */
+
+   /* ======== Modals ======== */
+
+   /* ======== Dropdowns ======== */
+
+   /* ======== Mega Dropdowns ======== */
+
+   /* ======== Pop Over ======== */
+
+   /* ======== Tooltip ======== */
+
+   /* ======== Side Nav ======== */
+
+   /* ======== Errors ======== */

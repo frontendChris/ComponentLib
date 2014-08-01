@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Frontend Components Library</title>
 
-	<script type="text/javascript" src="//jquery"></script>
-	<script type="text/javascript" src="//jqueryui"></script>
-	<script type="text/javascript" src="//jquervalidate"></script>
-	<script type="text/javascript" src="//jquerytemplates"></script>
-	<script type="text/javascript" src="//customselect"></script>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Frontend Components Library</title>
+	<meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/frontend.css">
 	<link rel="stylesheet" type="text/css" href="css/adapt.css">
 
 
 </head>
-<body>
+<body class="layout_center">
 	<!-- navigation -->
 	<div class="page_container_outer nav">
 		
@@ -42,7 +43,7 @@
 	</div>
 
 	<!-- body content -->
-	<div class="page_container_outer nav">
+	<div class="page_container_outer">
 		
 		<div class="page_container_inner">
 			<h1>Frontend Components Library</h1>
@@ -68,13 +69,22 @@
 	</div>
 
 	<!-- footer -->
-	<div class="page_container_outer nav">
+	<div class="page_container_outer">
 		
 		<div class="page_container_inner">
 			&copy; Frontend Usability Engineering 2014
 		</div>
 	
 	</div>
+
+	<!-- load jquery or fallback -->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/vendor/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="//jquerytemplates"></script>
+	<script type="text/javascript" src="//customselect"></script>
+	<script type="text/javascript" src-"main.js"></script>
 
 </body>
 </html>

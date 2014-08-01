@@ -1,0 +1,14 @@
+/* ==========================================================================
+   Stlyes specific to the frontend library
+   ========================================================================== */
+
+   body {
+   	background-color: #fafafa;
+   }
+
+
+   .nav  {
+   		background-color: #000;
+   		padding: 20px 0;
+   		color: #fff;
+   }
