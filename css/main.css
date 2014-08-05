@@ -6,7 +6,7 @@
 	   3. Full Width -- layout_full
    ========================================================================== */
 
-    .layout_center {} /* inclide this class on the body tag to implement this layout */
+    .layout_center {} /* include this class on the body tag to implement this layout */
 
    		.layout_center .page_container_outer {
    			width: 100%;
@@ -19,7 +19,7 @@
 
     
 
-    .layout_side {} /* inclide this class on the body tag to implement this layout */
+    .layout_side {} /* include this class on the body tag to implement this layout */
    		
    		.layout_side .page_container_outer {
    			width: 100%;
@@ -31,7 +31,7 @@
 
     
 
-    .layout_full {} /* inclide this class on the body tag to implement this layout */
+    .layout_full {} /* include this class on the body tag to implement this layout */
 
    		.layout_full .page_container_outer {
    			width: 100%;
@@ -41,28 +41,156 @@
 	   			margin: 0 20px; /* set gutter to left & right of content */
 	   		}
 
+	.main {
+	   	background-color: #fafafa;
+	}
+
+		.main .page_container_inner {
+			padding: 20px 0;
+		}
+
+	.footer {
+
+	}
+
+		.footer .page_container_inner {
+			padding: 20px 0;
+			border-top: 1px solid #333;
+		}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+    .left {
+   		float: left;
+    }
+
+    .right {
+   		float: right
+    }
+
+    .clearfix {
+   		clear: both;
+    }
+
+    .clearfix:after {
+	   content: " "; /* Older browser do not support empty content */
+	   visibility: hidden;
+	   display: block;
+	   height: 0;
+	   clear: both;
+	}
 
 /* ==========================================================================
    Basic Html Elements
    ========================================================================== */
 
-   /* ======== Forms ======== */
+    /* ======== Forms ======== */
 
-   /* ======== Buttons ======== */
+    /* ======== Buttons ======== */
 
-   /* ======== Fonts ======== */
+    /* ======== Fonts ======== */
 
-   /* ======== Lists ======== */
+    /* ======== Lists ======== */
 
-   /* ======== Tables ======== */
+    ul {
+    	margin-left: 10px;
+    }
 
-   /* ======== Images ======== */
+    	ul li {
+    		list-style: none;
+    		margin: 10px 0;
+    	}
+
+    		ul li a {
+    			text-decoration: none;
+    			color: #333;
+    			height: 45px;
+    		}
+
+    		ul li a:hover {
+    			text-decoration: underline;
+    		}
+
+    ol {
+    	margin-left: 20px;
+    }
+
+    	ol li {
+    		margin: 10px 0;
+    	}
+
+    		ol li a {
+    			text-decoration: none;
+    			color: #333;
+    			height: 45px;
+    		}
+
+    		ol li a:hover {
+    			text-decoration: underline;
+    		}
+
+
+    /* ======== Tables ======== */
+
+    /* ======== Images ======== */
 
 /* ==========================================================================
    Html Components
    ========================================================================== */
 
-   /* ======== Navigation ======== */
+    /* ======== Navigation ======== */
+
+    .brand a {
+   		display: block;
+   		height: 50px;
+    }
+
+    .brand a img {
+   		width: 100%;
+   		margin-top: 10px;
+    }
+
+
+    .nav_list ul {
+    }
+
+	   	.nav_list ul li {
+	   		list-style: none;
+	   		float: left; 
+	   		margin: 0;
+	   	}
+
+	   		.nav_list ul li a {
+	   			text-decoration: none;
+	   			padding: 0 10px;
+	   			font-size: 12px;
+	   			display: block;
+	   			height: 50px;
+	   			line-height: 50px;
+	   		}
+
+	   			.nav_list ul li a:hover {
+	   				background-color: #ddd;
+	   			}
+
+	/* ======== Hero ======== */
+
+	.hero {
+		color: #fff;
+
+		background: #db3391; /* Old browsers */
+		background: -moz-linear-gradient(left,  #db3391 0%, #db5c77 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,#db3391), color-stop(100%,#db5c77)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left,  #db3391 0%,#db5c77 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  #db3391 0%,#db5c77 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  #db3391 0%,#db5c77 100%); /* IE10+ */
+		background: linear-gradient(to right,  #db3391 0%,#db5c77 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db3391', endColorstr='#db5c77',GradientType=1 ); /* IE6-9 */
+	}
+
+
 
 /* ==========================================================================
    Js Components
