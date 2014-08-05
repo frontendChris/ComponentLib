@@ -1,9 +1,10 @@
 /* ==========================================================================
    Page Structure
-	   3 x layouts
+	   4 x layouts
 	   1. Standard Center Aligned -- layout_center
-	   2. Side Nav -- layout_side
-	   3. Full Width -- layout_full
+	   2. Left Side Nav -- layout_side_left
+     3. Right Side Nav -- layout_side_right
+	   4. Full Width -- layout_full
    ========================================================================== */
 
     .layout_center {} /* include this class on the body tag to implement this layout */
@@ -18,18 +19,68 @@
 	   		}
 
     
+    /* ======== Left Sidebar layout ======== */
 
-    .layout_side {} /* include this class on the body tag to implement this layout */
+    .layout_side_left {} /* include this class on the body tag to implement this layout */
    		
-   		.layout_side .page_container_outer {
+   		.layout_side_left .page_container_outer {
    			width: 100%;
    		}
 
-	   		.layout_side .page_container_inner {
-	   			width: 100%;
+	   		.layout_side_left .page_container_inner {
+	   			margin: 0 20px;
 	   		}
 
+        .layout_side_left .main {
+          position: relative;
+        }
+
+          .layout_side_left .main .sidebar_left {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 250px;
+          }
+
+          .layout_side_left .main .push_left {
+            margin-left: 250px;
+            margin-right: 0;
+            padding: 0;
+            padding: 10px;
+          }
+
+    /* ======== Right Sidebar layout ======== */
+
+    .layout_side_right {} /* include this class on the body tag to implement this layout */
+      
+      .layout_side_right .page_container_outer {
+        width: 100%;
+      }
+
+        .layout_side_right .page_container_inner {
+          margin: 0 20px;
+        }
+
+        .layout_side_right .main {
+          position: relative;
+        }
+
+          .layout_side_right .main .sidebar_right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 250px;
+            right: 0;
+          }
+
+          .layout_side_right .main .push_right {
+            margin-left: 0px;
+            margin-right: 250px;
+            padding: 0;
+            padding: 10px;
+          }
     
+    /* ======== Full width layout ======== */
 
     .layout_full {} /* include this class on the body tag to implement this layout */
 
@@ -61,6 +112,9 @@
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+    .clear {
+      clear: both;
+    }
 
     .left {
    		float: left;
@@ -104,7 +158,6 @@
     	}
 
     		ul li a {
-    			text-decoration: none;
     			color: #333;
     			height: 45px;
     		}
@@ -122,7 +175,6 @@
     	}
 
     		ol li a {
-    			text-decoration: none;
     			color: #333;
     			height: 45px;
     		}
