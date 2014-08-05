@@ -42,8 +42,7 @@
    	}	
 
    		.layout_side_left .sidebar_left ul,
-   		.layout_side_right .sidebar_right ul,
-   		.layout_full .main  {
+   		.layout_side_right .sidebar_right ul  {
    			margin: 0;
    		}
 
@@ -79,21 +78,18 @@
     	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db3391', endColorstr='#db5c77',GradientType=1 ); /* IE6-9 */
    	}
 
-    .layout_side_left .main .content_blocks,
-    .layout_side_right .main .content_blocks {
+    .main .content_blocks {
     	margin: 0;
     }
 
-    	.layout_side_left .main .content_blocks .content_block,
-    	.layout_side_right .main .content_blocks .content_block {
+    	.main .content_blocks .content_block {
    			width: 25%;
    			float: left;
    			min-height: 220px;
    			margin: 0;
     	}
 
-    		.layout_side_left .main .content_blocks .content_block a,
-    		.layout_side_right .main .content_blocks .content_block a {
+    		.main .content_blocks .content_block a {
     			margin: 10px;
     			background-color: #fff;
     			display: block;
@@ -103,8 +99,7 @@
     			text-decoration: none;
     		}
 
-    			.layout_side_left .main .content_blocks .content_block a span,
-    			.layout_side_right .main .content_blocks .content_block a span {
+    			.main .content_blocks .content_block a span {
     				padding-top: 70px;
     				font-size: 40px;
     				color: #b6b6b6;

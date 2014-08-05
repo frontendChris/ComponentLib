@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Frontend Components Library</title>
+	<meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/frontend.css">
+	<link rel="stylesheet" type="text/css" href="css/adapt.css">
+
+
+</head>
+<body class="layout_center">
+	<!-- navigation -->
+	<div class="page_container_outer nav">
+		
+		<div class="page_container_inner clearfix">
+			
+			<div class="brand left">
+				<a href="index.html">
+					<img src="imgs/brand_x2.png" alt="Fontend Components Library" />
+				</a>
+			</div>
+			
+			<div class="nav_list right">
+				<ul>
+					<li>
+						<a href="page_templates.html">Page Templates</a>
+					</li>
+					<li>
+						<a href="html_elements.html">Html Elements</a>
+					</li>
+					<li>
+						<a href="javascript.html">Javascript Components</a>
+					</li>
+					<li>
+						<a href="js_libs.html">Javascript Libraries</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>
+
+	<!-- body content -->
+	<div class="main page_container_outer">
+
+		<div class="hero">
+			<div class="page_container_inner">
+				<h1>Frontend Components Library</h1>
+				<h2>Page Templates</h2>
+			</div>
+		</div>
+		
+		<div class="page_container_inner">
+			<section>
+				<h3>Center Aligned Template</h3>
+
+				<p>Center aligned template. It's width is set to 960px by default</p>
+
+				<code>
+					&lt;!DOCTYPE html&gt;<br/>
+					&lt;html&gt;<br/>
+					&lt;head&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;meta charset="utf-8"&gt;<br/>
+				    &#160;&#160;&#160;&#160;&#160;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br/>
+				    &#160;&#160;&#160;&#160;&#160;&lt;title&gt;Some title&lt;/title&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;meta name="format-detection" content="telephone=no"&gt;<br/>
+				    &#160;&#160;&#160;&#160;&#160;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;<br/>
+					&lt;/head&gt;<br/>
+					&lt;body class="layout_center"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;div class="page_container_outer"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;div class="page_container_inner"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+					&lt;/body&gt;<br/>
+				</code>
+
+				<div class="example">
+					<p>The page you are currently viewing is an example of a center aligned layout</p>
+				</div>
+			</section>
+
+			<section>
+				<h3>Left Sidebar Template</h3>
+
+				<p>Layout template that has a fixed left-hand sidebar and a fluid content area.</p>
+
+				<code>
+					&lt;!DOCTYPE html&gt;<br/>
+					&lt;html&gt;<br/>
+					&lt;head&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;meta charset="utf-8"&gt;<br/>
+				    &#160;&#160;&#160;&#160;&#160;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br/>
+				    &#160;&#160;&#160;&#160;&#160;&lt;title&gt;Some title&lt;/title&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;meta name="format-detection" content="telephone=no"&gt;<br/>
+				    &#160;&#160;&#160;&#160;&#160;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;<br/>
+					&lt;/head&gt;<br/>
+					&lt;body class="layout_side_left"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;div class="page_container_outer"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;div class="page_container_inner"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;div class="sidebar_left"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Sidebar Content<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;div class="push_left page_container_inner"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Main Content<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+					&lt;/body&gt;<br/>
+				</code>
+
+				<div class="example">
+					<a href="layout_side_left.html">Click here to see an example</a>
+				</div>
+			</section>
+
+			<section>
+				<h3>Right Sidebar Template</h3>
+
+				<p>Layout template that has a fixed right-hand sidebar and a fluid content area.</p>
+
+				<code>
+					&lt;!DOCTYPE html&gt;<br/>
+					&lt;html&gt;<br/>
+					&lt;head&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;meta charset="utf-8"&gt;<br/>
+				    &#160;&#160;&#160;&#160;&#160;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br/>
+				    &#160;&#160;&#160;&#160;&#160;&lt;title&gt;Some title&lt;/title&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;meta name="format-detection" content="telephone=no"&gt;<br/>
+				    &#160;&#160;&#160;&#160;&#160;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;<br/>
+					&lt;/head&gt;<br/>
+					&lt;body class="layout_side_right"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;div class="page_container_outer"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;div class="page_container_inner"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;div class="sidebar_right"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Sidebar Content<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;div class="push_right page_container_inner"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Main Content<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+					&lt;/body&gt;<br/>
+				</code>
+
+				<div class="example">
+					<a href="layout_side_right.html">Click here to see an example</a>
+				</div>
+			</section>
+
+			<section>
+				<h3>Full Width Template</h3>
+
+				<p>Full-width, fluid template.</p>
+
+				<code>
+					&lt;!DOCTYPE html&gt;<br/>
+					&lt;html&gt;<br/>
+					&lt;head&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;meta charset="utf-8"&gt;<br/>
+				    &#160;&#160;&#160;&#160;&#160;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br/>
+				    &#160;&#160;&#160;&#160;&#160;&lt;title&gt;Some title&lt;/title&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;meta name="format-detection" content="telephone=no"&gt;<br/>
+				    &#160;&#160;&#160;&#160;&#160;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;<br/>
+					&lt;/head&gt;<br/>
+					&lt;body class="layout_full"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;div class="page_container_outer"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;div class="page_container_inner"&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br/>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+					&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+					&lt;/body&gt;<br/>
+				</code>
+
+				<div class="example"></div>
+					<a href="full_width.html">Click here to see an example</a>
+				</div>
+			</section>
+	
+	</div>
+
+	<!-- footer -->
+	<div class="footer page_container_outer">
+		
+		<div class="page_container_inner">
+			Frontend Usability Engineering &copy; 2014
+		</div>
+	
+	</div>
+
+	<!-- load jquery or fallback -->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+	<!-- load other scripts -->
+	<script type="text/javascript" src="js/vendor/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.loadTemplate-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.customSelect.min.js"></script>
+	<script type="text/javascript" src-"js/main.js"></script>
+
+</body>
+</html>
