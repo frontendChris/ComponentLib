@@ -85,6 +85,7 @@ input, select, textarea, button {
 			}
 			
 			.form_container .form_row .form_input .radio_item>.radio_label label 					{background-image:url(../imgs/icon_radiobtn_off.png);}
+			.form_container .form_row .form_input .radio_item>.radio_label label:hover				{background-image:url(../imgs/icon_radiobtn_hover.png);}
 			.form_container .form_row .form_input .radio_item>.radio_label label.active 			{background-image:url(../imgs/icon_radiobtn_on.png);}
 			.form_container .form_row .form_input .radio_item>.radio_label label.disabled			{background-image:url(../imgs/icon_radiobtn_disabled_off.png);}
 			.form_container .form_row .form_input .radio_item>.radio_label label.active.disabled	{background-image:url(../imgs/icon_radiobtn_disabled_on.png);}
@@ -112,6 +113,7 @@ input, select, textarea, button {
 				}
 				
 				.form_container .form_row .form_input .chbox_item>.chbox_label label 					{background-image:url(../imgs/icon_chbox_off.png);}
+				.form_container .form_row .form_input .chbox_item>.chbox_label label:hover 				{background-image:url(../imgs/icon_chbox_hover.png);}
 				.form_container .form_row .form_input .chbox_item>.chbox_label label.active 			{background-image:url(../imgs/icon_chbox_on.png);}
 				.form_container .form_row .form_input .chbox_item>.chbox_label label.disabled			{background-image:url(../imgs/icon_chbox_disabled_off.png);}
 				.form_container .form_row .form_input .chbox_item>.chbox_label label.active.disabled	{background-image:url(../imgs/icon_chbox_disabled_on.png);}
@@ -120,7 +122,8 @@ input, select, textarea, button {
 /* Styling of Form Elements */		
 		
 input.inputbox[type="text"],
-input.inputbox[type="password"] {
+input.inputbox[type="password"],
+input.inputbox[type="date"] {
 	border:1px solid #CCCCCC;
 	background-color:#FFFFFF;
 	width:100%;
@@ -165,11 +168,8 @@ textarea.inputbox {
 
 .dateinput {	
 	background:#FFFFFF url(../imgs/icon_datepicker.png) right center / 22px 18px no-repeat;
+	background:#FFFFFF url(../imgs/icon_datepicker_small.png) right center / 22px 18px no-repeat\9;
 	cursor:pointer;
-}
-
-input.inputbox:focus {
-	border:1px solid #999999;
 }
 
 select {
@@ -199,9 +199,14 @@ span.customSelect.changed {
 
 .customSelectInner {
 	background:url(../imgs/icon_dropdown_arrow.png) right center / 20px 20px no-repeat;
+	cursor:pointer;
 }
 
-
+span.customSelectHover,
+input.inputbox:hover,
+input.inputbox:focus {
+	border:1px solid #999999;
+}
 
 /* Remove Firefox Outline */	
 a:focus, a:active, 

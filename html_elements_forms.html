@@ -83,7 +83,7 @@
                                 <label for="form_password">Password <span class="mandatory">*</span></label>
                             </div>
                             <div class="form_input">
-                                <input type="text" class="inputbox" placeholder="Enter Text" id="form_password" name="form_password" />
+                                <input type="password" class="inputbox" placeholder="Enter Text" id="form_password" name="form_password" />
                             </div>
                         </div>
                         <div class="form_row">
@@ -289,6 +289,7 @@
 	<script type="text/javascript" src="js/vendor/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.loadTemplate-1.4.4.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.customSelect.min.js"></script>
+	<script type="text/javascript" src="js/vendor/respond.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
     
     <script type="text/javascript">
@@ -302,7 +303,7 @@
             $('.dateinput').datepicker({
                 dateFormat: "dd/mm/yy",
                 defaultDate: 0,
-                /*
+                /* Put this in if you want it to appear in a div in the center of the page
 				beforeShow: function() {
                     $(this).datepicker("widget").wrap("<div class='datepickerBorder'></div>");
                 },
@@ -312,6 +313,17 @@
 				*/
             });
             $( ".dateinput" ).datepicker( "setDate", "0" );
+			
+			// Detect if Browser is handheld and swap out date picker
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				
+				$( "input.dateinput" ).each(function( index ) {
+					$(this).clone().attr('type','date').insertAfter(this).prev().remove();
+				});
+				
+			}
+			
+			
         });
     </script>
 
