@@ -4,6 +4,14 @@
     html {
    		background-color: #fafafa;
     }
+	
+	body {
+		font-size:0.8em;
+		font-family:sans-serif, Arial, Helvetica;
+		margin:0px;
+		padding:0px;
+		color:#454545;
+	}
 
 
   	.nav {
@@ -117,9 +125,6 @@
     	background: linear-gradient(to right,  #db3391 0%,#db5c77 100%); /* W3C */
     	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db3391', endColorstr='#db5c77',GradientType=1 ); /* IE6-9 */
     }
-
-
-
 
 
 
