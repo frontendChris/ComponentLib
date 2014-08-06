@@ -130,6 +130,8 @@ input.inputbox[type="password"] {
     box-sizing: border-box;
 	padding:0px 5px;
 	color:#454545;
+	-webkit-appearance:none;
+	border-radius:0;
 }
 
 input.inputbox[type="file"] {
@@ -143,6 +145,8 @@ input.inputbox[type="file"] {
 	height:30px;
 	line-height:30px;
 	opacity:0;
+	-webkit-appearance:none;
+	border-radius:0;
 }
 
 textarea.inputbox {
@@ -155,6 +159,8 @@ textarea.inputbox {
     box-sizing: border-box;
 	padding:5px 5px;
 	color:#454545;
+	-webkit-appearance:none;
+	border-radius:0;
 }
 
 .dateinput {	
