@@ -46,7 +46,21 @@ input, select, textarea, button {
 				}
 
 
-		.form_container .form_row .form_input {}
+		.form_container .form_row .form_input {
+			position:relative;
+		}
+		
+		.form_container .form_row .form_input.has_button {
+			padding-right:80px;
+		}
+		
+		.form_container .form_row .form_input.has_button input[type="button"],
+		.form_container .form_row .form_input.has_button button {
+			position:absolute;
+			right:0px;
+			top:0px;
+		}
+		
 
 
 		/* Radio Buttons */
@@ -62,7 +76,7 @@ input, select, textarea, button {
 				position:relative;
 				display:block;
 				line-height:20px;
-				padding:5px 0px 5px 30px;
+				padding:5px 0px 5px 25px;
 				background-position:0px 7px;
 				background-repeat:no-repeat;
 				background-size:16px 16px;
@@ -89,10 +103,10 @@ input, select, textarea, button {
 					position:relative;
 					display:block;
 					line-height:20px;
-					padding:5px 0px 5px 30px;
-					background-position:0px 5px;
+					padding:5px 0px 5px 25px;
+					background-position:0px 7px;
 					background-repeat:no-repeat;
-					background-size:20px 20px;
+					background-size:16px 16px;
 					background-color: transparent;
 					cursor:pointer;
 				}
@@ -126,6 +140,9 @@ input.inputbox[type="file"] {
     box-sizing: border-box;
 	padding:0px 5px;
 	color:#454545;
+	height:30px;
+	line-height:30px;
+	opacity:0;
 }
 
 textarea.inputbox {
@@ -141,7 +158,8 @@ textarea.inputbox {
 }
 
 .dateinput {	
-	background:#FFFFFF url(../imgs/icon_datepicker.png) right center / 30px 20px no-repeat;
+	background:#FFFFFF url(../imgs/icon_datepicker.png) right center / 22px 18px no-repeat;
+	cursor:pointer;
 }
 
 input.inputbox:focus {
@@ -191,3 +209,17 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     border: 0;
     outline : 0;
 }
+
+
+
+.btn_search {
+	width:70px;
+	background-color:#333333;
+	color:#FFFFFF;
+	line-height:30px;
+	height:30px;
+	border:0px;
+	margin:0px;
+	padding:0px;
+}
+
