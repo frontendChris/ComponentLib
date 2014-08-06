@@ -1,5 +1,5 @@
 .ui-widget{
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family:sans-serif, Arial, Helvetica;
 	font-size:1.0em;
 	border-radius:0px !important;
 	border:0px solid;
@@ -9,8 +9,8 @@
 .ui-widget select, 
 .ui-widget textarea, 
 .ui-widget button {
-	font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 1.1 em;
+	font-family:sans-serif, Arial, Helvetica;
+    font-size: 1.0 em;
 }
 
 .ui-widget-overlay {
