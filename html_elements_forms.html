@@ -66,58 +66,78 @@
 		
 		<div class="page_container_inner">
 			<section>
-				<h3>Form Elements</h3>
-
-				<form action="#">
+				<h3>Default Form Structure</h3>
+                <code>
+                    &lt;form action="#"&gt;<br/>
+                    &#160;&#160;&#160;&#160;&#160;&lt;div class="form_container"&gt; *** Place Content Here *** &lt;/div&gt;<br/>
+                    &lt;/form&gt;
+                </code>
+            </section>
+                
+            <section>
+                <h3>Form Elements</h3>
+                <form action="#" id="generic_form">
                     <div class="form_container">
+                    	<h4>Text Input</h4>
                         <div class="form_row">
                             <div class="form_label">
-                                <label for="form_text">Text Input <span class="mandatory">*</span></label>
+                                <label for="form_username">Username<span class="mandatory">*</span></label>
                             </div>
                             <div class="form_input">
-                                <input type="text" class="inputbox" placeholder="Enter Text" id="form_text" name="form_text" />
+                                <input type="text" class="inputbox" placeholder="Enter Text" id="form_username" name="form_username" required="required" aria-invalid="false" />
                             </div>
                         </div>
+                        
+                        <!--
+                        <code>
+                            &lt;div class="form_row"&gt;<br/>
+                            &#160;&#160;&#160;&#160;&#160;&lt;div class="form_label"&gt;<br/>
+                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;label for="form_text"&gt;Enter Username &lt;span class="mandatory"&gt;*&lt;/span&gt;&lt;/label&gt;<br/>
+                            &#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+                            &#160;&#160;&#160;&#160;&#160;&lt;div class="form_input"&gt;<br/>
+                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;input type="text" class="inputbox" placeholder="Enter Text" id="form_text" name="form_text" required="required" aria-invalid="false" /&gt;<br/>
+                            &#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+                            &lt;/div&gt;
+                        </code>
+                        -->
+                        
+                    	<h4>Password</h4>
                         <div class="form_row">
                             <div class="form_label">
                                 <label for="form_password">Password <span class="mandatory">*</span></label>
                             </div>
                             <div class="form_input">
-                                <input type="password" class="inputbox" placeholder="Enter Text" id="form_password" name="form_password" />
+                                <input type="password" class="inputbox" placeholder="Enter Password" id="form_password" name="form_password" required="required" aria-invalid="false" />
                             </div>
                         </div>
+                        
+                    	<h4>Date Input</h4>
                         <div class="form_row">
                             <div class="form_label">
-                                <label for="form_search">Search Input <span class="mandatory">*</span></label>
+                                <label for="form_date">Select Date <span class="mandatory">*</span></label>
                             </div>
                             <div class="form_input">
-                                <input type="text" class="inputbox searchbox" placeholder="Enter Text" id="form_search" name="form_search" />
+                                <input type="text" class="inputbox dateinput" placeholder="Select Date" id="form_date" name="form_date" required="required" aria-invalid="false" />
                             </div>
                         </div>
-                        <div class="form_row">
-                            <div class="form_label">
-                                <label for="form_date">Date Input <span class="mandatory">*</span></label>
-                            </div>
-                            <div class="form_input">
-                                <input type="text" class="inputbox dateinput" placeholder="Select Date" id="form_date" name="form_date" />
-                            </div>
-                        </div>
+
+                    	<h4>Date Range with labels</h4>
                         <div class="form_row">
                             <div class="form_input clearfix">
                                 <fieldset>
-                                    <legend>Date Range</legend>
-                                    <div class="form_item">
-                                        <div class="form_label hidden_label">
-                                            <label for="from_date">From Date <span class="mandatory">*</span></label>
+                                    <legend>Select Period</legend>
+                                    <div class="form_item inline_label" style="width:48%">
+                                        <div class="form_label">
+                                            <label for="from_date">From:</label>
                                         </div>
                                         <div class="form_input">
                                             <input type="text" class="inputbox dateinput" placeholder="From Date" id="from_date" name="from_date" />
                                         </div>
                                     </div>
-                                    <div class="form_date_seperator">-</div>
-                                    <div class="form_item">
-                                        <div class="form_label hidden_label">
-                                            <label for="to_date">To Date <span class="mandatory">*</span></label>
+                                    <div class="form_date_seperator" style="width:4%"></div>
+                                    <div class="form_item inline_label" style="width:48%">
+                                        <div class="form_label">
+                                            <label for="to_date">To:</label>
                                         </div>
                                         <div class="form_input">
                                             <input type="text" class="inputbox dateinput" placeholder="To Date" id="to_date" name="to_date" />
@@ -126,60 +146,97 @@
                                 </fieldset>
                             </div>
                         </div>
+                        
+                        
+                    	<h4>Date Range</h4>
                         <div class="form_row">
                             <div class="form_input clearfix">
                                 <fieldset>
-                                    <legend>Date of Birth <span class="mandatory">*</span></legend>
-                                    <div class="form_item">
+                                    <legend>Select Period</legend>
+                                    <div class="form_item" style="width:48%">
                                         <div class="form_label hidden_label">
-                                            <label for="dob_day">Day <span class="mandatory">*</span></label>
+                                            <label for="from_range_date">From:</label>
                                         </div>
                                         <div class="form_input">
-                                            <input type="text" class="inputbox" placeholder="DD" id="dob_day" name="dob_day" />
+                                            <input type="text" class="inputbox dateinput" placeholder="From Date" id="from_range_date" name="from_range_date" />
                                         </div>
                                     </div>
-                                    <div class="form_date_seperator">/</div>
-                                    <div class="form_item">
+                                    <div class="form_date_seperator" style="width:4%">-</div>
+                                    <div class="form_item" style="width:48%">
                                         <div class="form_label hidden_label">
-                                            <label for="dob_month">Month <span class="mandatory">*</span></label>
+                                            <label for="to_range_date">To:</label>
                                         </div>
                                         <div class="form_input">
-                                            <input type="text" class="inputbox" placeholder="MM" id="dob_month" name="dob_month" />
-                                        </div>
-                                    </div>
-                                    <div class="form_date_seperator">/</div>
-                                    <div class="form_item">
-                                        <div class="form_label hidden_label">
-                                            <label for="dob_year">Year <span class="mandatory">*</span></label>
-                                        </div>
-                                        <div class="form_input">
-                                            <input type="text" class="inputbox" placeholder="YYYY" id="dob_year" name="dob_year" />
+                                            <input type="text" class="inputbox dateinput" placeholder="To Date" id="to_range_date" name="to_range_date" />
                                         </div>
                                     </div>
                                 </fieldset>
                             </div>
                         </div>
                         
+                        
+                    	<h4>Date of Birth</h4>
+                        <div class="form_row">
+                            <div class="form_input clearfix">
+                                <fieldset>
+                                    <legend>Date of Birth <span class="mandatory">*</span></legend>
+                                    <div class="form_item" style="width:25%;">
+                                        <div class="form_label hidden_label">
+                                            <label for="dob_day">Day <span class="mandatory">*</span></label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="text" class="inputbox" placeholder="DD" id="dob_day" name="dob_day" maxlength="2" required="required" aria-invalid="false" />
+                                        </div>
+                                    </div>
+                                    <div class="form_date_seperator" style="width:5%;">/</div>
+                                    <div class="form_item" style="width:25%;">
+                                        <div class="form_label hidden_label">
+                                            <label for="dob_month">Month <span class="mandatory">*</span></label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="text" class="inputbox" placeholder="MM" id="dob_month" name="dob_month" maxlength="2" required="required" aria-invalid="false" />
+                                        </div>
+                                    </div>
+                                    <div class="form_date_seperator" style="width:5%;">/</div>
+                                    <div class="form_item" style="width:40%;">
+                                        <div class="form_label hidden_label">
+                                            <label for="dob_year">Year <span class="mandatory">*</span></label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="text" class="inputbox" placeholder="YYYY" id="dob_year" name="dob_year" maxlength="4" required="required" aria-invalid="false" />
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        
+                    	<h4>Search</h4>
                         <div class="form_row">
                             <div class="form_label">
-                                <label for="form_search">Search Input</label>
+                                <label for="form_search">Search</label>
                             </div>
                             <div class="form_input">
                                 <input type="text" class="inputbox searchbox" placeholder="Enter Text" id="form_search" name="form_search" />
                             </div>
                         </div>
+                        
+                        
+                    	<h4>Search with Button</h4>
                         <div class="form_row">
                             <div class="form_label">
-                                <label for="form_search_btn">Search Input with Button</label>
+                                <label for="form_search_btn">Search</label>
                             </div>
                             <div class="form_input has_button">
                                 <input type="text" class="inputbox searchbox" placeholder="Enter Text" id="form_search_btn" name="form_search_btn" />
                                 <button class="btn_normal btn_search">Search</button>
                             </div>
                         </div>
+                        
+                        
+                    	<h4>Select</h4>
                         <div class="form_row">
                             <div class="form_label">
-                                <label for="form_select">Select <span class="mandatory">*</span></label>
+                                <label for="form_select">Select Fruit <span class="mandatory">*</span></label>
                             </div>
                             <div class="form_input">
                                 <select class="custom" id="form_select" name="form_select">
@@ -191,39 +248,45 @@
                                 </select>
                             </div>
                         </div>
+                        
+                        
+                    	<h4>Radio Buttons</h4>
                         <div class="form_row">
                             <div class="form_input">
                                 <fieldset>
                                     <legend>Radio Buttons <span class="mandatory">*</span></legend>
                                     <div class="radio_item">
-                                        <div class="radio_input"><input type="radio" name="radio_options" id="radio_1" checked="checked" /></div>
+                                        <div class="radio_input"><input type="radio" name="radio_options" id="radio_1" checked="checked" required="required" aria-invalid="false" /></div>
                                         <div class="radio_label"><label for="radio_1">Radio Option 1</label></div>
                                     </div>
                                     <div class="radio_item">
-                                        <div class="radio_input"><input type="radio" name="radio_options" id="radio_2" /></div>
+                                        <div class="radio_input"><input type="radio" name="radio_options" id="radio_2" required="required" aria-invalid="false" /></div>
                                         <div class="radio_label"><label for="radio_2">Radio Option 2</label></div>
                                     </div>
                                     <div class="radio_item">
-                                        <div class="radio_input"><input type="radio" name="radio_options" id="radio_3" disabled="disabled" /></div>
+                                        <div class="radio_input"><input type="radio" name="radio_options" id="radio_3" disabled="disabled" required="required" aria-invalid="false" /></div>
                                         <div class="radio_label"><label for="radio_3">Radio Option 3</label></div>
                                     </div>
                                 </fieldset>
                             </div>
                         </div>
+                        
+                        
+                    	<h4>Check Boxes</h4>
                         <div class="form_row">
                             <div class="form_input">
                                 <fieldset>
                                     <legend>Check Boxes</legend>
                                     <div class="chbox_item">
-                                        <div class="chbox_input"><input type="checkbox" name="checkbox_1" id="checkbox_1" checked="checked" /></div>
+                                        <div class="chbox_input"><input type="checkbox" name="checkbox_1" id="checkbox_1" checked="checked" required="required" aria-invalid="false" /></div>
                                         <div class="chbox_label"><label for="checkbox_1">Checkbox Option 1</label></div>
                                     </div>
                                     <div class="chbox_item">
-                                        <div class="chbox_input"><input type="checkbox" name="checkbox_2" id="checkbox_2" /></div>
+                                        <div class="chbox_input"><input type="checkbox" name="checkbox_2" id="checkbox_2" required="required" aria-invalid="false" /></div>
                                         <div class="chbox_label"><label for="checkbox_2">Checkbox Option 2</label></div>
                                     </div>
                                     <div class="chbox_item">
-                                        <div class="chbox_input"><input type="checkbox" name="checkbox_3" id="checkbox_3" disabled="disabled" /></div>
+                                        <div class="chbox_input"><input type="checkbox" name="checkbox_3" id="checkbox_3" disabled="disabled" required="required" aria-invalid="false" /></div>
                                         <div class="chbox_label"><label for="checkbox_3">Checkbox Option 3</label></div>
                                     </div>
                                     <div class="chbox_item">
@@ -233,39 +296,20 @@
                                 </fieldset>
                             </div>
                         </div>
+                        
+                        
+                    	<h4>Textarea</h4>
                         <div class="form_row">
                             <div class="form_label">
                                 <label for="form_textarea">Textarea</label>
                             </div>
                             <div class="form_input">
-                                <textarea class="inputbox" id="form_textarea" name="form_textarea" placeholder="Enter Text"> </textarea>
+                                <textarea class="inputbox" id="form_textarea" name="form_textarea" placeholder="Enter Text" > </textarea>
                             </div>
                         </div>
                     </div>
                 </form>
 
-				<code>
-					&lt;!DOCTYPE html&gt;<br/>
-					&lt;html&gt;<br/>
-					&lt;head&gt;<br/>
-					&#160;&#160;&#160;&#160;&#160;&lt;meta charset="utf-8"&gt;<br/>
-				    &#160;&#160;&#160;&#160;&#160;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br/>
-				    &#160;&#160;&#160;&#160;&#160;&lt;title&gt;Some title&lt;/title&gt;<br/>
-					&#160;&#160;&#160;&#160;&#160;&lt;meta name="format-detection" content="telephone=no"&gt;<br/>
-				    &#160;&#160;&#160;&#160;&#160;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;<br/>
-					&lt;/head&gt;<br/>
-					&lt;body class="layout_center"&gt;<br/>
-					&#160;&#160;&#160;&#160;&#160;&lt;div class="page_container_outer"&gt;<br/>
-					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;div class="page_container_inner"&gt;<br/>
-					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br/>
-					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
-					&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
-					&lt;/body&gt;<br/>
-				</code>
-
-				<div class="example">
-					<p>The page you are currently viewing is an example of a center aligned layout</p>
-				</div>
 			</section>
 
 		</div>
@@ -316,14 +360,31 @@
 			
 			// Detect if Browser is handheld and swap out date picker
 			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-				
 				$( "input.dateinput" ).each(function( index ) {
 					$(this).clone().attr('type','date').insertAfter(this).prev().remove();
-				});
-				
+				});	
 			}
-			
-			
+        });
+    </script>
+    
+    
+    <!-- Form Validation -->
+    <script type="text/javascript">
+        $().ready(function() {
+            // validate the login form when it is submitted
+            $("#generic_form").validate({
+                rules: {
+                    form_username: {
+                        required: true
+                    }
+                },
+                messages: {
+                    form_username: {
+                        required: "Please ensure you have entered a valid username",
+                    }
+                }	
+            });
+            
         });
     </script>
 
