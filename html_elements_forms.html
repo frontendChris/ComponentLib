@@ -3,23 +3,23 @@
 <head>
 
 	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 	<title>Frontend Components Library</title>
-	<meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
 
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/frontend.css">
-	<link rel="stylesheet" type="text/css" href="css/adapt.css">
-	<link rel="stylesheet" type="text/css" href="css/forms.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/frontend.css" />
+	<link rel="stylesheet" type="text/css" href="css/adapt.css" />
     
     
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css" />
 
+	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
 
 </head>
 <body class="layout_center">
@@ -88,18 +88,23 @@
                             </div>
                         </div>
                         
-                        <!--
-                        <code>
+                        <!-- Example Code -->
+                        <a href="javascript:void[0]" class="code_link">Show Example Code</a>
+                        <code style="display:none;">
                             &lt;div class="form_row"&gt;<br/>
-                            &#160;&#160;&#160;&#160;&#160;&lt;div class="form_label"&gt;<br/>
-                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;label for="form_text"&gt;Enter Username &lt;span class="mandatory"&gt;*&lt;/span&gt;&lt;/label&gt;<br/>
-                            &#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
-                            &#160;&#160;&#160;&#160;&#160;&lt;div class="form_input"&gt;<br/>
-                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;input type="text" class="inputbox" placeholder="Enter Text" id="form_text" name="form_text" required="required" aria-invalid="false" /&gt;<br/>
-                            &#160;&#160;&#160;&#160;&#160;&lt;/div&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_label"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="form_username"&gt;Username&lt;span class="mandatory"&gt;*&lt;/span&gt;&lt;/label&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_input"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" class="inputbox" placeholder="Enter Text" id="form_username" name="form_username" required="required" aria-invalid="false" /&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
                             &lt;/div&gt;
                         </code>
-                        -->
+                        
+                        
+                        
+                        
+                        
                         
                     	<h4>Password</h4>
                         <div class="form_row">
@@ -110,6 +115,20 @@
                                 <input type="password" class="inputbox" placeholder="Enter Password" id="form_password" name="form_password" required="required" aria-invalid="false" />
                             </div>
                         </div>
+                        
+                        
+                        <!-- Example Code -->
+                        <a href="javascript:void[0]" class="code_link">Show Example Code</a>
+                        <code style="display:none;">
+                            &lt;div class="form_row"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_label"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="form_password"&gt;Password &lt;span class="mandatory"&gt;*&lt;/span&gt;&lt;/label&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_input"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="password" class="inputbox" placeholder="Enter Password" id="form_password" name="form_password" required="required" aria-invalid="false" /&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+                            &lt;/div&gt;
+                        </code>
                         
                     	<h4>Date Input</h4>
                         <div class="form_row">
@@ -206,6 +225,10 @@
                                             <input type="text" class="inputbox" placeholder="YYYY" id="dob_year" name="dob_year" maxlength="4" required="required" aria-invalid="false" />
                                         </div>
                                     </div>
+                                    
+                                    <label for="dob_day" class="error"></label>
+                                    <label for="dob_month" class="error"></label>
+                                    <label for="dob_year" class="error"></label>
                                 </fieldset>
                             </div>
                         </div>
@@ -239,9 +262,9 @@
                                 <label for="form_select">Select Fruit <span class="mandatory">*</span></label>
                             </div>
                             <div class="form_input">
-                                <select class="custom" id="form_select" name="form_select">
+                                <select class="custom" id="form_select" name="form_select" required="required">
                                     <option value="">Please Select an option</option>
-                                    <option value="A">A is for Apple</option>
+                                    <option value="A">A is for Apple Donec sollicitudin venenatis ipsum, non placerat nisi bibendum eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et ligula pulvinar, mollis mi non, sollicitudin libero. Maecenas in dui id metus eleifend ornare. </option>
                                     <option value="B">B is for Banance</option>
                                     <option value="C">C is for Cat</option>
                                     <option value="D">D is for Dog</option>
@@ -256,20 +279,36 @@
                                 <fieldset>
                                     <legend>Radio Buttons <span class="mandatory">*</span></legend>
                                     <div class="radio_item">
-                                        <div class="radio_input"><input type="radio" name="radio_options" id="radio_1" checked="checked" required="required" aria-invalid="false" /></div>
-                                        <div class="radio_label"><label for="radio_1">Radio Option 1</label></div>
+                                        <div class="radio_label">
+                                        	<label for="radio_1">
+                                            	<span class="radio_input"><input type="radio" name="radio_options" id="radio_1" required="required" aria-invalid="false" checked="checked" /></span>
+                                                Radio Option 1
+                                            </label>
+                                        </div>
                                     </div>
                                     <div class="radio_item">
-                                        <div class="radio_input"><input type="radio" name="radio_options" id="radio_2" required="required" aria-invalid="false" /></div>
-                                        <div class="radio_label"><label for="radio_2">Radio Option 2</label></div>
+                                        <div class="radio_label">
+                                        	<label for="radio_2">
+                                            	<span class="radio_input"><input type="radio" name="radio_options" id="radio_2" aria-invalid="false" /></span>
+                                                Radio Option 2
+                                            </label>
+                                        </div>
                                     </div>
                                     <div class="radio_item">
-                                        <div class="radio_input"><input type="radio" name="radio_options" id="radio_3" disabled="disabled" required="required" aria-invalid="false" /></div>
-                                        <div class="radio_label"><label for="radio_3">Radio Option 3</label></div>
+                                        <div class="radio_label">
+                                        	<label for="radio_3">
+                                            	<span class="radio_input"><input type="radio" name="radio_options" id="radio_3" disabled="disabled" aria-invalid="false" /></span>
+                                                Radio Option 3
+                                            </label>
+                                        </div>
                                     </div>
+                                    <label for="radio_options" class="error"></label>
                                 </fieldset>
                             </div>
                         </div>
+                        <script type="text/javascript">
+                        
+						</script>
                         
                         
                     	<h4>Check Boxes</h4>
@@ -277,22 +316,40 @@
                             <div class="form_input">
                                 <fieldset>
                                     <legend>Check Boxes</legend>
+                                    
                                     <div class="chbox_item">
-                                        <div class="chbox_input"><input type="checkbox" name="checkbox_1" id="checkbox_1" checked="checked" required="required" aria-invalid="false" /></div>
-                                        <div class="chbox_label"><label for="checkbox_1">Checkbox Option 1</label></div>
+                                        <div class="chbox_label">
+                                        	<label for="checkbox_1">
+                                            	<span class="chbox_input"><input type="checkbox" name="checkbox_options" id="checkbox_1" aria-invalid="false" required="required" checked="checked" /></span>
+                                                Checkbox Option 1
+                                            </label>
+                                        </div>
                                     </div>
                                     <div class="chbox_item">
-                                        <div class="chbox_input"><input type="checkbox" name="checkbox_2" id="checkbox_2" required="required" aria-invalid="false" /></div>
-                                        <div class="chbox_label"><label for="checkbox_2">Checkbox Option 2</label></div>
+                                        <div class="chbox_label">
+                                        	<label for="checkbox_2">
+                                            	<span class="chbox_input"><input type="checkbox" name="checkbox_options" id="checkbox_2" aria-invalid="false" /></span>
+                                                Checkbox Option 2
+                                            </label>
+                                        </div>
                                     </div>
                                     <div class="chbox_item">
-                                        <div class="chbox_input"><input type="checkbox" name="checkbox_3" id="checkbox_3" disabled="disabled" required="required" aria-invalid="false" /></div>
-                                        <div class="chbox_label"><label for="checkbox_3">Checkbox Option 3</label></div>
+                                        <div class="chbox_label">
+                                        	<label for="checkbox_3">
+                                            	<span class="chbox_input"><input type="checkbox" name="checkbox_options" id="checkbox_3" aria-invalid="false" disabled="disabled" checked="checked" /></span>
+                                                Checkbox Option 3
+                                            </label>
+                                        </div>
                                     </div>
                                     <div class="chbox_item">
-                                        <div class="chbox_input"><input type="checkbox" name="checkbox_4" id="checkbox_4" disabled="disabled" checked="checked" /></div>
-                                        <div class="chbox_label"><label for="checkbox_4">Checkbox Option 4</label></div>
+                                        <div class="chbox_label">
+                                        	<label for="checkbox_4">
+                                            	<span class="chbox_input"><input type="checkbox" name="checkbox_options" id="checkbox_4" aria-invalid="false" disabled="disabled"/></span>
+                                                Checkbox Option 4
+                                            </label>
+                                        </div>
                                     </div>
+                                    <label for="checkbox_options" class="error"></label>
                                 </fieldset>
                             </div>
                         </div>
@@ -308,6 +365,8 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <input type="submit" value="Test Form" class="btn_normal"/>
                 </form>
 
 			</section>
@@ -368,21 +427,27 @@
     </script>
     
     
+    <!-- Show or hide the Example Code -->
+    <script type="text/javascript">
+		$(document).ready(function() {
+			$('.code_link').click(function() {
+				$(this).next('code').toggle();
+				if ($(this).text() == "Close") {
+				   $(this).text("Show Example Code")
+				} else {
+				   $(this).text("Close");
+				}
+			}); 
+		});
+	</script>
+    
     <!-- Form Validation -->
     <script type="text/javascript">
         $().ready(function() {
             // validate the login form when it is submitted
             $("#generic_form").validate({
-                rules: {
-                    form_username: {
-                        required: true
-                    }
-                },
-                messages: {
-                    form_username: {
-                        required: "Please ensure you have entered a valid username",
-                    }
-                }	
+                rules: {},
+                messages: {}	
             });
             
         });

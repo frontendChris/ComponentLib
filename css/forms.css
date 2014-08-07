@@ -73,11 +73,7 @@ input, select, textarea, button {
 
 
 		/* Radio Buttons */
-		.form_container .form_row .form_input .radio_item>.radio_input {
-			position:absolute;
-			display:block;
-			text-indent:-999em;
-		}
+		
 		
 		.form_container .form_row .form_input .radio_item>.radio_label {}
 
@@ -93,6 +89,18 @@ input, select, textarea, button {
 				cursor:pointer;
 			}
 			
+				.form_container .form_row .form_input .radio_item>.radio_label label .radio_input {
+					position:relative;
+					display:block;
+				}
+				
+					.form_container .form_row .form_input .radio_item>.radio_label label .radio_input input {
+						position:absolute;
+						-moz-opacity: 0;
+						opacity:0;
+						filter: alpha(opacity=0);
+					}
+			
 			.form_container .form_row .form_input .radio_item>.radio_label label 					{background-image:url(../imgs/icon_radiobtn_off.png);}
 			.form_container .form_row .form_input .radio_item>.radio_label label:hover				{background-image:url(../imgs/icon_radiobtn_hover.png);}
 			.form_container .form_row .form_input .radio_item>.radio_label label.active 			{background-image:url(../imgs/icon_radiobtn_on.png);}
@@ -102,10 +110,7 @@ input, select, textarea, button {
 			
 			
 		/* Checkboxes */
-			.form_container .form_row .form_input .chbox_item>.chbox_input {
-				position:absolute;
-				text-indent:-999em;
-			}
+			
 			
 			.form_container .form_row .form_input .chbox_item>.chbox_label {}
 			
@@ -120,6 +125,17 @@ input, select, textarea, button {
 					background-color: transparent;
 					cursor:pointer;
 				}
+				
+					.form_container .form_row .form_input .chbox_item>.chbox_label label .chbox_input {
+						position:relative;
+					}
+					
+						.form_container .form_row .form_input .chbox_item>.chbox_label label .chbox_input input {
+							position:absolute;
+							-moz-opacity: 0;
+							opacity:0;
+							filter: alpha(opacity=0);
+						}
 				
 				.form_container .form_row .form_input .chbox_item>.chbox_label label 					{background-image:url(../imgs/icon_chbox_off.png);}
 				.form_container .form_row .form_input .chbox_item>.chbox_label label:hover 				{background-image:url(../imgs/icon_chbox_hover.png);}
@@ -160,33 +176,18 @@ input, select, textarea, button {
 		
 input.inputbox[type="text"],
 input.inputbox[type="password"],
-input.inputbox[type="date"] {
-	border:1px solid #e3e3e3;
-	border-top:1px solid #CCCCCC;
-	background-color:#FFFFFF;
-	width:100%;
-	display:block;
-	height:30px;
-	line-height:30px;
-    box-sizing: border-box;
-	padding:0px 5px;
-	color:#454545;
-	-webkit-appearance:none;
-	border-radius:0px;
-}
-
+input.inputbox[type="date"],
 input.inputbox[type="file"] {
 	border:1px solid #e3e3e3;
 	border-top:1px solid #CCCCCC;
 	background-color:#FFFFFF;
 	width:100%;
 	display:block;
+	height:30px;
+	line-height:30px;
     box-sizing: border-box;
 	padding:0px 5px;
 	color:#454545;
-	height:30px;
-	line-height:30px;
-	opacity:0;
 	-webkit-appearance:none;
 	border-radius:0px;
 }
@@ -207,12 +208,14 @@ textarea.inputbox {
 }
 
 .dateinput {	
-	background:#FFFFFF url(../imgs/icon_datepicker.png) right center / 22px 18px no-repeat;
+	background:#FFFFFF url(../imgs/icon_datepicker.png) right center no-repeat;
 	cursor:pointer;
 }
 
 select {
-	width:100%;
+	width:100% !important;
+	left:0px;
+	top:0px;
 }
 
 span.customSelect {
@@ -238,14 +241,21 @@ span.customSelect.changed {
 }
 
 .customSelectInner {
-	background:url(../imgs/icon_dropdown_arrow.png) right center / 20px 20px no-repeat;
+	background:url(../imgs/icon_dropdown_arrow.png) right center no-repeat;
 	cursor:pointer;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	padding-right:20px;
+	width:100% !important;
+	box-sizing: border-box;
 }
 
 span.customSelectHover,
 input.inputbox:hover,
 input.inputbox:focus {
 	border:1px solid #999999;
+	outline:none;
 }
 
 /* Remove Firefox Outline */	
@@ -265,13 +275,17 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 
 .btn_search {
 	width:70px;
-	background-color:#333333;
-	color:#FFFFFF;
-	line-height:30px;
-	height:30px;
-	border:0px;
-	margin:0px;
 	padding:0px;
+}
+
+label.error {
+	display:none;
+	color:#FFFFFF;
+	padding:5px;
+	background-color:#CC0000;
+	clear:both;
+	line-height:20px;
+	margin-bottom:10px;
 }
 
 
@@ -305,4 +319,5 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	.form_container .form_row .form_input .chbox_item>.chbox_label label.active.disabled	{background-image:url(../imgs/icon_chbox_disabled_on_x2.png);}
 	.form_container .form_row .form_input .chbox_item>.chbox_label label.error				{background-image:url(../imgs/icon_chbox_error_x2.png) !important; color:#CC6666;}		
 }
+
 
