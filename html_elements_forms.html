@@ -14,12 +14,11 @@
 	<link rel="stylesheet" type="text/css" href="css/frontend.css" />
 	<link rel="stylesheet" type="text/css" href="css/adapt.css" />
     
-    
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css" />
 
-	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    
 
 </head>
 <body class="layout_center">
@@ -74,11 +73,11 @@
                 </code>
             </section>
                 
+            <!-- STACKED FORM ELEMENTS -->
             <section>
                 <h3>Form Elements</h3>
                 <form action="#" id="generic_form">
                     <div class="form_container">
-                    	<h4>Text Input</h4>
                         <div class="form_row">
                             <div class="form_label">
                                 <label for="form_username">Username<span class="mandatory">*</span></label>
@@ -88,25 +87,8 @@
                             </div>
                         </div>
                         
-                        <!-- Example Code -->
-                        <a href="javascript:void[0]" class="code_link">Show Example Code</a>
-                        <code style="display:none;">
-                            &lt;div class="form_row"&gt;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_label"&gt;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="form_username"&gt;Username&lt;span class="mandatory"&gt;*&lt;/span&gt;&lt;/label&gt;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_input"&gt;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" class="inputbox" placeholder="Enter Text" id="form_username" name="form_username" required="required" aria-invalid="false" /&gt;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
-                            &lt;/div&gt;
-                        </code>
                         
                         
-                        
-                        
-                        
-                        
-                    	<h4>Password</h4>
                         <div class="form_row">
                             <div class="form_label">
                                 <label for="form_password">Password <span class="mandatory">*</span></label>
@@ -116,21 +98,6 @@
                             </div>
                         </div>
                         
-                        
-                        <!-- Example Code -->
-                        <a href="javascript:void[0]" class="code_link">Show Example Code</a>
-                        <code style="display:none;">
-                            &lt;div class="form_row"&gt;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_label"&gt;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="form_password"&gt;Password &lt;span class="mandatory"&gt;*&lt;/span&gt;&lt;/label&gt;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_input"&gt;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="password" class="inputbox" placeholder="Enter Password" id="form_password" name="form_password" required="required" aria-invalid="false" /&gt;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
-                            &lt;/div&gt;
-                        </code>
-                        
-                    	<h4>Date Input</h4>
                         <div class="form_row">
                             <div class="form_label">
                                 <label for="form_date">Select Date <span class="mandatory">*</span></label>
@@ -139,10 +106,9 @@
                                 <input type="text" class="inputbox dateinput" placeholder="Select Date" id="form_date" name="form_date" required="required" aria-invalid="false" />
                             </div>
                         </div>
-
-                    	<h4>Date Range with labels</h4>
+                        
                         <div class="form_row">
-                            <div class="form_input clearfix">
+                            <div class="form_fieldset clearfix">
                                 <fieldset>
                                     <legend>Select Period</legend>
                                     <div class="form_item inline_label" style="width:48%">
@@ -165,11 +131,9 @@
                                 </fieldset>
                             </div>
                         </div>
-                        
-                        
-                    	<h4>Date Range</h4>
+                                              
                         <div class="form_row">
-                            <div class="form_input clearfix">
+                            <div class="form_fieldset clearfix">
                                 <fieldset>
                                     <legend>Select Period</legend>
                                     <div class="form_item" style="width:48%">
@@ -193,10 +157,8 @@
                             </div>
                         </div>
                         
-                        
-                    	<h4>Date of Birth</h4>
                         <div class="form_row">
-                            <div class="form_input clearfix">
+                            <div class="form_fieldset clearfix">
                                 <fieldset>
                                     <legend>Date of Birth <span class="mandatory">*</span></legend>
                                     <div class="form_item" style="width:25%;">
@@ -204,7 +166,7 @@
                                             <label for="dob_day">Day <span class="mandatory">*</span></label>
                                         </div>
                                         <div class="form_input">
-                                            <input type="text" class="inputbox" placeholder="DD" id="dob_day" name="dob_day" maxlength="2" required="required" aria-invalid="false" />
+                                            <input type="number" class="inputbox" placeholder="DD" id="dob_day" name="dob_day" maxlength="2" required="required" aria-invalid="false" />
                                         </div>
                                     </div>
                                     <div class="form_date_seperator" style="width:5%;">/</div>
@@ -213,7 +175,7 @@
                                             <label for="dob_month">Month <span class="mandatory">*</span></label>
                                         </div>
                                         <div class="form_input">
-                                            <input type="text" class="inputbox" placeholder="MM" id="dob_month" name="dob_month" maxlength="2" required="required" aria-invalid="false" />
+                                            <input type="number" class="inputbox" placeholder="MM" id="dob_month" name="dob_month" maxlength="2" required="required" aria-invalid="false" />
                                         </div>
                                     </div>
                                     <div class="form_date_seperator" style="width:5%;">/</div>
@@ -222,10 +184,10 @@
                                             <label for="dob_year">Year <span class="mandatory">*</span></label>
                                         </div>
                                         <div class="form_input">
-                                            <input type="text" class="inputbox" placeholder="YYYY" id="dob_year" name="dob_year" maxlength="4" required="required" aria-invalid="false" />
+                                            <input type="number" class="inputbox" placeholder="YYYY" id="dob_year" name="dob_year" maxlength="4" required="required" aria-invalid="false" />
                                         </div>
                                     </div>
-                                    
+                                    <br class="clear"/>
                                     <label for="dob_day" class="error"></label>
                                     <label for="dob_month" class="error"></label>
                                     <label for="dob_year" class="error"></label>
@@ -233,7 +195,6 @@
                             </div>
                         </div>
                         
-                    	<h4>Search</h4>
                         <div class="form_row">
                             <div class="form_label">
                                 <label for="form_search">Search</label>
@@ -243,8 +204,6 @@
                             </div>
                         </div>
                         
-                        
-                    	<h4>Search with Button</h4>
                         <div class="form_row">
                             <div class="form_label">
                                 <label for="form_search_btn">Search</label>
@@ -255,8 +214,6 @@
                             </div>
                         </div>
                         
-                        
-                    	<h4>Select</h4>
                         <div class="form_row">
                             <div class="form_label">
                                 <label for="form_select">Select Fruit <span class="mandatory">*</span></label>
@@ -264,7 +221,7 @@
                             <div class="form_input">
                                 <select class="custom" id="form_select" name="form_select" required="required">
                                     <option value="">Please Select an option</option>
-                                    <option value="A">A is for Apple Donec sollicitudin venenatis ipsum, non placerat nisi bibendum eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et ligula pulvinar, mollis mi non, sollicitudin libero. Maecenas in dui id metus eleifend ornare. </option>
+                                    <option value="A">A is for Apple</option>
                                     <option value="B">B is for Banance</option>
                                     <option value="C">C is for Cat</option>
                                     <option value="D">D is for Dog</option>
@@ -272,10 +229,8 @@
                             </div>
                         </div>
                         
-                        
-                    	<h4>Radio Buttons</h4>
                         <div class="form_row">
-                            <div class="form_input">
+                            <div class="form_fieldset">
                                 <fieldset>
                                     <legend>Radio Buttons <span class="mandatory">*</span></legend>
                                     <div class="radio_item">
@@ -306,14 +261,9 @@
                                 </fieldset>
                             </div>
                         </div>
-                        <script type="text/javascript">
                         
-						</script>
-                        
-                        
-                    	<h4>Check Boxes</h4>
                         <div class="form_row">
-                            <div class="form_input">
+                            <div class="form_fieldset">
                                 <fieldset>
                                     <legend>Check Boxes</legend>
                                     
@@ -354,8 +304,6 @@
                             </div>
                         </div>
                         
-                        
-                    	<h4>Textarea</h4>
                         <div class="form_row">
                             <div class="form_label">
                                 <label for="form_textarea">Textarea</label>
@@ -370,6 +318,284 @@
                 </form>
 
 			</section>
+            
+            
+            <!-- INLINE FORM ELEMENTS -->
+            <section>
+                <h3>Form Elements Inline</h3>
+                <form action="#" id="generic_form_inline">
+                    <div class="form_container">
+                        <div class="form_row inline clearfix">
+                            <div class="form_label">
+                                <label for="form_username_inline">Username<span class="mandatory">*</span></label>
+                            </div>
+                            <div class="form_input">
+                                <input type="text" class="inputbox" placeholder="Enter Text" id="form_username_inline" name="form_username_inline" required="required" aria-invalid="false" />
+                            </div>
+                        </div>
+                        
+                        <div class="form_row inline clearfix">
+                            <div class="form_label">
+                                <label for="form_password_inline">Password <span class="mandatory">*</span></label>
+                            </div>
+                            <div class="form_input">
+                                <input type="password" class="inputbox" placeholder="Enter Password" id="form_password_inline" name="form_password_inline" required="required" aria-invalid="false" />
+                            </div>
+                        </div>
+                        
+                        <div class="form_row inline clearfix">
+                            <div class="form_label">
+                                <label for="form_date_inline">Select Date <span class="mandatory">*</span></label>
+                            </div>
+                            <div class="form_input">
+                                <input type="text" class="inputbox dateinput" placeholder="Select Date" id="form_date_inline" name="form_date_inline" required="required" aria-invalid="false" />
+                            </div>
+                        </div>
+                        
+                        <div class="form_row inline clearfix">
+                            <div class="form_fieldset clearfix">
+                                <fieldset>
+                                    <legend>Select Period</legend>
+                                    <div class="form_item inline_label" style="width:48%">
+                                        <div class="form_label">
+                                            <label for="from_date_inline">From:</label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="text" class="inputbox dateinput" placeholder="From Date" id="from_date_inline" name="from_date_inline" />
+                                        </div>
+                                    </div>
+                                    <div class="form_date_seperator" style="width:4%"></div>
+                                    <div class="form_item inline_label" style="width:48%">
+                                        <div class="form_label">
+                                            <label for="to_date_inline">To:</label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="text" class="inputbox dateinput" placeholder="To Date" id="to_date_inline" name="to_date_inline" />
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        
+                        <!-- Example Code 
+                        <a href="javascript:void[0]" class="code_link">Show Example Code</a>
+                        <code style="display:none;">
+                            &lt;div class="form_row inline clearfix"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_input clearfix"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Select Period&lt;/legend&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_item inline_label" style="width:48%"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_label"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="from_date_inline"&gt;From:&lt;/label&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_input"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" class="inputbox dateinput" placeholder="From Date" id="from_date_inline" name="from_date_inline" /&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_date_seperator" style="width:4%"&gt;&lt;/div&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_item inline_label" style="width:48%"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_label"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="to_date_inline"&gt;To:&lt;/label&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form_input"&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" class="inputbox dateinput" placeholder="To Date" id="to_date_inline" name="to_date_inline" /&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+                            &lt;/div&gt;
+                        </code>
+                        -->
+                        <div class="form_row inline clearfix">
+                            <div class="form_fieldset clearfix">
+                                <fieldset>
+                                    <legend>Select Period</legend>
+                                    <div class="form_item" style="width:48%">
+                                        <div class="form_label hidden_label">
+                                            <label for="from_range_date_inline">From:</label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="text" class="inputbox dateinput" placeholder="From Date" id="from_range_date_inline" name="from_range_date_inline" />
+                                        </div>
+                                    </div>
+                                    <div class="form_date_seperator" style="width:4%">-</div>
+                                    <div class="form_item" style="width:48%">
+                                        <div class="form_label hidden_label">
+                                            <label for="to_range_date_inline">To:</label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="text" class="inputbox dateinput" placeholder="To Date" id="to_range_date_inline" name="to_range_date_inline" />
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        
+                        <div class="form_row inline clearfix">
+                            <div class="form_fieldset clearfix">
+                                <fieldset>
+                                    <legend>Date of Birth <span class="mandatory">*</span></legend>
+                                    <div class="form_item" style="width:25%;">
+                                        <div class="form_label hidden_label">
+                                            <label for="dob_day_inline">Day <span class="mandatory">*</span></label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="number" class="inputbox" placeholder="DD" id="dob_day_inline" name="dob_day_inline" maxlength="2" required="required" aria-invalid="false" />
+                                        </div>
+                                    </div>
+                                    <div class="form_date_seperator" style="width:5%;">/</div>
+                                    <div class="form_item" style="width:25%;">
+                                        <div class="form_label hidden_label">
+                                            <label for="dob_month_inline">Month <span class="mandatory">*</span></label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="number" class="inputbox" placeholder="MM" id="dob_month_inline" name="dob_month_inline" maxlength="2" required="required" aria-invalid="false" />
+                                        </div>
+                                    </div>
+                                    <div class="form_date_seperator" style="width:5%;">/</div>
+                                    <div class="form_item" style="width:40%;">
+                                        <div class="form_label hidden_label">
+                                            <label for="dob_year_inline">Year <span class="mandatory">*</span></label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="number" class="inputbox" placeholder="YYYY" id="dob_year_inline" name="dob_year_inline" maxlength="4" required="required" aria-invalid="false" />
+                                        </div>
+                                    </div>
+                                    <br class="clear"/>
+                                    <label for="dob_day_inline" class="error"></label>
+                                    <label for="dob_month_inline" class="error"></label>
+                                    <label for="dob_year_inline" class="error"></label>
+                                </fieldset>
+                            </div>
+                        </div>
+                        
+                        <div class="form_row inline clearfix">
+                            <div class="form_label">
+                                <label for="form_search_inline">Search</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="text" class="inputbox searchbox" placeholder="Enter Text" id="form_search_inline" name="form_search_inline" />
+                            </div>
+                        </div>
+                        
+                        <div class="form_row inline clearfix">
+                            <div class="form_label">
+                                <label for="form_search_btn_inline">Search</label>
+                            </div>
+                            <div class="form_input has_button">
+                                <input type="text" class="inputbox searchbox" placeholder="Enter Text" id="form_search_btn_inline" name="form_search_btn_inline" />
+                                <button class="btn_normal btn_search">Search</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form_row inline clearfix">
+                            <div class="form_label">
+                                <label for="form_select_inline">Select Fruit <span class="mandatory">*</span></label>
+                            </div>
+                            <div class="form_input">
+                                <select class="custom" id="form_select_inline" name="form_select_inline" required="required">
+                                    <option value="">Please Select an option</option>
+                                    <option value="A">A is for Apple</option>
+                                    <option value="B">B is for Banance</option>
+                                    <option value="C">C is for Cat</option>
+                                    <option value="D">D is for Dog</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form_row inline clearfix">
+                            <div class="form_fieldset">
+                                <fieldset class="inline_elements">
+                                    <legend>Radio Buttons <span class="mandatory">*</span></legend>
+                                    <div class="radio_item">
+                                        <div class="radio_label">
+                                        	<label for="radio_1_inline">
+                                            	<span class="radio_input"><input type="radio" name="radio_options_inline" id="radio_1_inline" required="required" aria-invalid="false" checked="checked" /></span>
+                                                Radio Option 1
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="radio_item">
+                                        <div class="radio_label">
+                                        	<label for="radio_2_inline">
+                                            	<span class="radio_input"><input type="radio" name="radio_options_inline" id="radio_2_inline" aria-invalid="false" /></span>
+                                                Radio Option 2
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="radio_item">
+                                        <div class="radio_label">
+                                        	<label for="radio_3_inline">
+                                            	<span class="radio_input"><input type="radio" name="radio_options_inline" id="radio_3_inline" disabled="disabled" aria-invalid="false" /></span>
+                                                Radio Option 3
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <label for="radio_options_inline" class="error"></label>
+                                </fieldset>
+                            </div>
+                        </div>
+                        
+                        <div class="form_row inline clearfix">
+                            <div class="form_fieldset">
+                                <fieldset class="">
+                                    <legend>Check Boxes</legend>
+                                    
+                                    <div class="chbox_item">
+                                        <div class="chbox_label">
+                                        	<label for="checkbox_1_inline">
+                                            	<span class="chbox_input"><input type="checkbox" name="checkbox_options_inline" id="checkbox_1_inline" aria-invalid="false" required="required" checked="checked" /></span>
+                                                Checkbox Option 1
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="chbox_item">
+                                        <div class="chbox_label">
+                                        	<label for="checkbox_2_inline">
+                                            	<span class="chbox_input"><input type="checkbox" name="checkbox_options_inline" id="checkbox_2_inline" aria-invalid="false" /></span>
+                                                Checkbox Option 2
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="chbox_item">
+                                        <div class="chbox_label">
+                                        	<label for="checkbox_3_inline">
+                                            	<span class="chbox_input"><input type="checkbox" name="checkbox_options_inline" id="checkbox_3_inline" aria-invalid="false" disabled="disabled" checked="checked" /></span>
+                                                Checkbox Option 3
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="chbox_item">
+                                        <div class="chbox_label">
+                                        	<label for="checkbox_4_inline">
+                                            	<span class="chbox_input"><input type="checkbox" name="checkbox_options_inline" id="checkbox_4_inline" aria-invalid="false" disabled="disabled"/></span>
+                                                Checkbox Option 4
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <label for="checkbox_options_inline" class="error"></label>
+                                </fieldset>
+                            </div>
+                        </div>
+                        
+                        <div class="form_row inline clearfix">
+                            <div class="form_label">
+                                <label for="form_textarea_inline">Textarea</label>
+                            </div>
+                            <div class="form_input">
+                                <textarea class="inputbox" id="form_textarea_inline" name="form_textarea_inline" placeholder="Enter Text" > </textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <input type="submit" value="Test Form" class="btn_normal"/>
+                </form>
+
+			</section>
+            
+            
+            
+            
 
 		</div>
 	
@@ -406,6 +632,7 @@
             $('.dateinput').datepicker({
                 dateFormat: "dd/mm/yy",
                 defaultDate: 0,
+				numberOfMonths: 1,
                 /* Put this in if you want it to appear in a div in the center of the page
 				beforeShow: function() {
                     $(this).datepicker("widget").wrap("<div class='datepickerBorder'></div>");
@@ -438,6 +665,7 @@
 				   $(this).text("Close");
 				}
 			}); 
+			
 		});
 	</script>
     
@@ -449,9 +677,15 @@
                 rules: {},
                 messages: {}	
             });
+			
+			// validate the login form when it is submitted
+            $("#generic_form_inline").validate({
+                rules: {},
+                messages: {}	
+            });
             
         });
     </script>
-
+    
 </body>
 </html>

@@ -12,10 +12,11 @@
 	width: 260px;
 	padding: 10px;
 	display: none;
-	border-radius:5px !important;
-	-moz-border-radius:5px !important;
-	-webkit-border-radius:5px !important;
-	border:0px solid #e3e3e3;
+	border-radius:0px !important;
+	-moz-border-radius:0px !important;
+	-webkit-border-radius:0px !important;
+	border:1px solid #999999;
+	margin-top:-1px;
 }
 
 .ui-datepicker div {
@@ -25,10 +26,11 @@
 }
 
 .ui-datepicker .ui-datepicker-header {
-	background: #EDEBDB none;
+	background: transparent none;
 	border:0px solid;
 	position: relative;
 	padding: .2em 0;
+	border-bottom:1px solid #CCCCCC;
 }
 
 
@@ -41,7 +43,10 @@
 }
 .ui-datepicker .ui-datepicker-prev-hover,
 .ui-datepicker .ui-datepicker-next-hover {
-	top: 1px;
+	top: 2px;
+	background:none;
+	border:0px;
+	cursor:pointer;
 }
 .ui-datepicker .ui-datepicker-prev {
 	left: 2px;
@@ -50,10 +55,10 @@
 	right: 2px;
 }
 .ui-datepicker .ui-datepicker-prev-hover {
-	left: 1px;
+	left: 2px;
 }
 .ui-datepicker .ui-datepicker-next-hover {
-	right: 1px;
+	right: 2px;
 }
 .ui-datepicker .ui-datepicker-prev span,
 .ui-datepicker .ui-datepicker-next span {
@@ -65,8 +70,8 @@
 	margin-top: -8px;
 }
 .ui-datepicker .ui-datepicker-title {
-	margin: 0 2.3em;
-	line-height: 1.8em;
+	margin: 0 30px;
+	line-height: 30px;
 	text-align: center;
 }
 .ui-datepicker .ui-datepicker-title select {
@@ -103,23 +108,23 @@
 	padding: 0em;
 	text-align: center;
 	text-decoration: none;
-	background:#EDEBDB none;
+	background:#e3e3e3 none;
 	border:0px solid;
 	line-height:30px;
 }
 
 .ui-datepicker td a.ui-state-default.ui-state-hover {
-	background-color:#EDEBDB;	
+	background-color:#e3e3e3;	
 }
 
 .ui-datepicker td a.ui-state-default.ui-state-highlight {
-	color:#6D3B6A;
+	color:#db3491;
 	background-color:#FFFFFF;
 }
 
 .ui-datepicker td.ui-datepicker-current-day a.ui-state-default {
 	color:#FFFFFF;
-	background-color:#6D3B6A;
+	background-color:#db3491;
 }
 
 
@@ -221,4 +226,26 @@
 	top:0px;
 	bottom:0px;
 	right:0px;
+}
+
+
+.ui-icon-circle-triangle-w {
+	background: url(../imgs/icon_arrow_w.png) center center no-repeat !important;
+}
+
+.ui-icon-circle-triangle-e {
+	background: url(../imgs/icon_arrow_e.png) center center no-repeat !important;
+}
+
+
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+	.ui-icon-circle-triangle-w {
+		background: url(../imgs/icon_arrow_w_x2.png) center cente / 16px 16pxr no-repeat !important;
+	}
+	
+	.ui-icon-circle-triangle-e {
+		background: url(../imgs/icon_arrow_e_x2.png) center center / 16px 16px no-repeat !important;
+	}
+
 }

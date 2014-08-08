@@ -106,13 +106,4 @@ function checkDisabledChbox() {
 // Inititate the Custom Select Box
 $(function(){
 	$('select.custom').customSelect();
-	
-	function updateCustomSelect(){
-		$('select.custom').trigger('update');
-	}
-	
-	$(window).resize(function() {
-		updateCustomSelect()
-	});
-	
 });
