@@ -388,3 +388,24 @@ label.error {
 }
 
 
+
+@media (max-width:479px) {
+	.form_container .form_row.inline fieldset {
+			padding-left:0%;
+			position:relative;
+		}
+		
+			.form_container .form_row.inline fieldset legend {
+				position:relative;
+				left:0px;
+				top:0px;
+			}
+
+	
+	.form_container .form_row.inline .form_label,
+	.form_container .form_row.inline>.form_input {
+		float:none;
+		width:auto;
+	}
+}
+

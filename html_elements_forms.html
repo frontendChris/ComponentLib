@@ -72,6 +72,8 @@
                     &lt;/form&gt;
                 </code>
             </section>
+            
+            
                 
             <!-- STACKED FORM ELEMENTS -->
             <section>
@@ -166,7 +168,7 @@
                                             <label for="dob_day">Day <span class="mandatory">*</span></label>
                                         </div>
                                         <div class="form_input">
-                                            <input type="number" class="inputbox" placeholder="DD" id="dob_day" name="dob_day" maxlength="2" required="required" aria-invalid="false" />
+                                            <input type="number" class="inputbox" pattern="[0-9]*" placeholder="DD" id="dob_day" name="dob_day" required="required" aria-invalid="false" max="31" />
                                         </div>
                                     </div>
                                     <div class="form_date_seperator" style="width:5%;">/</div>
@@ -175,7 +177,7 @@
                                             <label for="dob_month">Month <span class="mandatory">*</span></label>
                                         </div>
                                         <div class="form_input">
-                                            <input type="number" class="inputbox" placeholder="MM" id="dob_month" name="dob_month" maxlength="2" required="required" aria-invalid="false" />
+                                            <input type="number" class="inputbox" pattern="[0-9]*" placeholder="MM" id="dob_month" name="dob_month"required="required" aria-invalid="false" max="12" />
                                         </div>
                                     </div>
                                     <div class="form_date_seperator" style="width:5%;">/</div>
@@ -184,9 +186,11 @@
                                             <label for="dob_year">Year <span class="mandatory">*</span></label>
                                         </div>
                                         <div class="form_input">
-                                            <input type="number" class="inputbox" placeholder="YYYY" id="dob_year" name="dob_year" maxlength="4" required="required" aria-invalid="false" />
+                                            <input type="number" class="inputbox" pattern="[0-9]*" placeholder="YYYY" id="dob_year" name="dob_year" required="required" aria-invalid="false" max="2014" />
                                         </div>
                                     </div>
+                                
+                                
                                     <br class="clear"/>
                                     <label for="dob_day" class="error"></label>
                                     <label for="dob_month" class="error"></label>
@@ -440,7 +444,7 @@
                                             <label for="dob_day_inline">Day <span class="mandatory">*</span></label>
                                         </div>
                                         <div class="form_input">
-                                            <input type="number" class="inputbox" placeholder="DD" id="dob_day_inline" name="dob_day_inline" maxlength="2" required="required" aria-invalid="false" />
+                                            <input type="number" class="inputbox" pattern="[0-9]*" placeholder="DD" id="dob_day_inline" name="dob_day_inline" required="required" aria-invalid="false" max="31" />
                                         </div>
                                     </div>
                                     <div class="form_date_seperator" style="width:5%;">/</div>
@@ -449,7 +453,7 @@
                                             <label for="dob_month_inline">Month <span class="mandatory">*</span></label>
                                         </div>
                                         <div class="form_input">
-                                            <input type="number" class="inputbox" placeholder="MM" id="dob_month_inline" name="dob_month_inline" maxlength="2" required="required" aria-invalid="false" />
+                                            <input type="number" class="inputbox" pattern="[0-9]*" placeholder="MM" id="dob_month_inline" name="dob_month_inline" required="required" aria-invalid="false" max="12" />
                                         </div>
                                     </div>
                                     <div class="form_date_seperator" style="width:5%;">/</div>
@@ -458,7 +462,7 @@
                                             <label for="dob_year_inline">Year <span class="mandatory">*</span></label>
                                         </div>
                                         <div class="form_input">
-                                            <input type="number" class="inputbox" placeholder="YYYY" id="dob_year_inline" name="dob_year_inline" maxlength="4" required="required" aria-invalid="false" />
+                                            <input type="number" class="inputbox" pattern="[0-9]*" placeholder="YYYY" id="dob_year_inline" name="dob_year_inline" required="required" aria-invalid="false" max="2014" />
                                         </div>
                                     </div>
                                     <br class="clear"/>
@@ -466,6 +470,7 @@
                                     <label for="dob_month_inline" class="error"></label>
                                     <label for="dob_year_inline" class="error"></label>
                                 </fieldset>
+                                
                             </div>
                         </div>
                         
