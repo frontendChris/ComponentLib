@@ -1,3 +1,4 @@
+@import url("modals.css") all;
 @import url("buttons.css") all;
 @import url("forms.css") all;
 @import url("responsive.css") all;
@@ -36,13 +37,9 @@
 	  	color: #000;
 	  	margin-bottom: 10px;
 	  	line-height: 1.4em;
-		font-size:1.1em;
+		  font-size:1.1em;
     }
-	
-	h4 {
-		margin:20px 0px 10px;
-		color:steelblue;
-	}
+
 	
 	.code_link {
 		line-height:20px;
