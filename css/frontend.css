@@ -101,6 +101,10 @@
 
     .main .content_blocks {
     	margin: 0;
+		float:left;
+		clear:both;
+		width:100%;
+		display:block;
     }
 
     	.main .content_blocks .content_block {

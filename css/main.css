@@ -29,6 +29,7 @@
 
 	   		.layout_side_left .page_container_inner {
 	   			margin: 0 20px;
+				position:relative;
 	   		}
 
         .layout_side_left .main {
@@ -37,7 +38,7 @@
 
           .layout_side_left .main .sidebar_left {
             position: absolute;
-            top: 0;
+            top: 20px;
             bottom: 0;
             width: 250px;
           }
@@ -59,6 +60,7 @@
 
         .layout_side_right .page_container_inner {
           margin: 0 20px;
+          position: relative;
         }
 
         .layout_side_right .main {
@@ -67,7 +69,7 @@
 
           .layout_side_right .main .sidebar_right {
             position: absolute;
-            top: 0;
+            top: 20px;
             bottom: 0;
             width: 250px;
             right: 0;

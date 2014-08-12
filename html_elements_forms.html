@@ -1,56 +1,49 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html><!-- InstanceBegin template="/Templates/page_generic.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 
-	<meta charset="utf-8">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-	<title>Frontend Components Library</title>
-	<meta name="format-detection" content="telephone=no" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
+<title>Frontend Components Library</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<link rel="stylesheet" type="text/css" href="css/frontend.css" />
-	<link rel="stylesheet" type="text/css" href="css/adapt.css" />
-    
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css" />
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/frontend.css" />
+<link rel="stylesheet" type="text/css" href="css/adapt.css" />
 
-    
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css" />
 
+<!-- Place any page specific CSS in here -->
+<!-- InstanceBeginEditable name="head" -->
+
+<!-- InstanceEndEditable -->
 </head>
+
+<!-- InstanceBeginEditable name="page_structure" -->
 <body class="layout_center">
-	<!-- navigation -->
+<!-- InstanceEndEditable -->	
+
+    <!-- Header & Navigation -->
 	<div class="page_container_outer nav">
-		
 		<div class="page_container_inner clearfix">
-			
 			<div class="brand left">
-				<a href="index.html">
-					<img src="imgs/brand_x2.png" alt="Fontend Components Library" />
-				</a>
+				<a href="index.html"><img src="imgs/brand_x2.png" alt="Fontend Components Library" /></a>
 			</div>
-			
 			<div class="nav_list right">
 				<ul>
-					<li>
-						<a href="page_templates.html">Page Templates</a>
-					</li>
-					<li>
-						<a href="html_elements.html">HTML Elements</a>
-					</li>
-					<li>
-						<a href="javascript.html">Javascript Components</a>
-					</li>
-					<li>
-						<a href="js_libs.html">Javascript Libraries</a>
-					</li>
+					<li><a href="page_templates.html">Page Templates</a></li>
+					<li><a href="html_elements.html">HTML Elements</a></li>
+					<li><a href="javascript.html">Javascript Components</a></li>
+					<li><a href="js_libs.html">Javascript Libraries</a></li>
 				</ul>
 			</div>
 		</div>
-	
 	</div>
 
 	<!-- body content -->
@@ -59,12 +52,15 @@
 		<div class="hero">
 			<div class="page_container_inner">
 				<h1>Frontend Components Library</h1>
-				<h2>HTML Elements - Forms</h2>
+				<!-- InstanceBeginEditable name="body_title" -->
+                	<h2>HTML Elements - Forms</h2>
+				<!-- InstanceEndEditable -->
 			</div>
 		</div>
 		
 		<div class="page_container_inner">
-			<section>
+			<!-- InstanceBeginEditable name="body_content" -->
+            <section>
 				<h3>Default Form Structure</h3>
                 <code>
                     &lt;form action="#"&gt;<br/>
@@ -597,35 +593,26 @@
                 </form>
 
 			</section>
-            
-            
-            
-            
-
+            <!-- InstanceEndEditable -->
 		</div>
-	
 	</div>
 
 	<!-- footer -->
 	<div class="footer page_container_outer">
-		
-		<div class="page_container_inner">
-			Frontend Usability Engineering &copy;2014
-		</div>
-	
+		<div class="page_container_inner">Frontend Usability Engineering &copy;2014</div>
 	</div>
 
-	<!-- load jquery or fallback -->
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-	<!-- load other scripts -->
+	<!-- Load Javascript Files -->
+	<script type="text/javascript" src="js/vendor/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.loadTemplate-1.4.4.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.customSelect.min.js"></script>
 	<script type="text/javascript" src="js/vendor/respond.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-    
+
+	<!-- Custom Javascript specific to page -->
+	<!-- InstanceBeginEditable name="footer" -->
     <script type="text/javascript">
 		$(document).ready(function() {
 			checkAppliedRadioBtn();
@@ -691,6 +678,7 @@
             
         });
     </script>
-    
+    <!-- InstanceEndEditable -->
+
 </body>
-</html>
+<!-- InstanceEnd --></html>
