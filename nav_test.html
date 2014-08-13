@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+
+<!-- Load Javascript Files -->
+<script type="text/javascript" src="js/vendor/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/vendor/respond.js"></script>
+
+<style>
+	body {
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:0.8em;
+		margin:0px;
+		padding:0px;
+	}
+	
+	body.no_scroll {
+		overflow:hidden;
+	}
+	
+	#overlay {
+		display:block;
+		background-color:rgba(0,0,0,0.8);
+		position:fixed;
+		left:0px;
+		top:0px;
+		right:0px;
+		bottom:0px;
+	}
+	
+	#category_container {
+		position:absolute;
+		overflow:auto;
+		height:auto;
+		display:block;
+		color:#FFFFFF;
+		background-color:#000000;
+		box-sizing:border-box;
+		top:0px;
+		left:0px;
+		right:0px;
+		
+	}
+</style>
+</head>
+
+<body>
+
+<div id="overlay">
+    <div id="category_container">
+        <h2>Categories</h2>
+        <ul>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+            <li>This is my link</li>
+        </ul>
+        
+        <h2>Shops</h2>
+        <ul>
+            <li>Shops</li>
+            <li>Shops</li>
+            <li>Shops</li>
+            <li>Shops</li>
+            <li>Shops</li>
+            <li>Shops</li>
+            <li>Shops</li>
+            <li>Shops</li>
+            <li>Shops</li>
+            <li>Shops</li>
+            <li>Shops</li>
+            <li>Shops</li>
+        </ul>
+    </div>
+</div>
+<input type="button" id="btn_categories" value="View Categories" />
+
+
+<script type="text/javascript">
+
+	var initialDivHeight = $('#category_container').height();
+	
+	$(document).ready(function() {
+		get_height_diff();
+		$('#overlay').hide();
+		$('#category_container').hide();
+		
+		$('#btn_categories').click(function(){
+			$('#overlay').fadeIn();
+			$('#category_container').toggle().slideDown(500);
+		});
+	});
+	
+	function get_height_diff() {
+		var viewportHeight = $(window).height();
+		var divHeight = $('#category_container').height();
+		var height_diff = viewportHeight - divHeight;
+		
+		// Check to see if category container height is bigger than viewport
+		if (divHeight >= viewportHeight) {
+			
+			// If it's bigger than the viewport set the height to 100%, else reset it to initial height
+			if(viewportHeight < initialDivHeight) {
+				divHeight = '100%';
+			} else {
+				divHeight = initialDivHeight
+			}
+		} else {
+			divHeight = parseInt(divHeight) + 'px';
+		}
+		// Apply the Height to the container
+		$("#category_container").css('height',divHeight);
+		
+		// Get the Difference in height between viewport and category div container and add it as the bottom difference
+		if (height_diff >= 0) {
+			height_diff = parseInt(height_diff) + 'px';
+		} else {
+			height_diff = '0px';
+		}
+		$("#category_container").css('bottom',height_diff);
+	}
+	
+	// Run the script on load
+	$(window).resize(function() {
+		get_height_diff();
+	});
+	
+
+
+</script>
+</body>
+</html>

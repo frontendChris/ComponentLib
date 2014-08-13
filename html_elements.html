@@ -19,6 +19,8 @@
 <link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css" />
 <link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css" />
 
+<link rel="stylesheet" type="text/css" href="css/responsive-nav.css" />
+
 <!-- Place any page specific CSS in here -->
 <!-- InstanceBeginEditable name="head" -->
 
@@ -29,13 +31,15 @@
 <body class="layout_center">
 <!-- InstanceEndEditable -->	
 
+
     <!-- Header & Navigation -->
 	<div class="page_container_outer nav">
 		<div class="page_container_inner clearfix">
 			<div class="brand left">
 				<a href="index.html"><img src="imgs/brand_x2.png" alt="Fontend Components Library" /></a>
 			</div>
-			<div class="nav_list right">
+            <button id="nav-toggle">Menu</button>
+			<div class="nav_list right" id="nav">
 				<ul>
 					<li><a href="page_templates.html">Page Templates</a></li>
 					<li><a href="html_elements.html">HTML Elements</a></li>
@@ -98,7 +102,15 @@
 	<script type="text/javascript" src="js/vendor/jquery.customSelect.min.js"></script>
 	<script type="text/javascript" src="js/vendor/respond.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-
+    
+    <!-- Responsive Nav -->
+	<script type="text/javascript" language="javascript" src="js/nav/responsive-nav.js"></script>
+    <script type="text/javascript">
+		var navigation = responsiveNav("#nav", {
+			customToggle: "#nav-toggle"
+		});
+    </script>
+    
 	<!-- Custom Javascript specific to page -->
 	<!-- InstanceBeginEditable name="footer" -->
     

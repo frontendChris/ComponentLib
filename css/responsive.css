@@ -6,6 +6,7 @@
 	.layout_center .page_container_inner {
 		width: auto; /* change size as required by project */
 		margin: auto;
-		padding:0px 10px;
+		padding-left:10px;
+		padding-right:10px;
 	}
 }

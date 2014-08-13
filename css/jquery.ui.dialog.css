@@ -20,7 +20,7 @@
 }
 
 .ui-dialog a {
-	color:#6D3B6A;
+	color:#454545;
 	text-decoration:underline;
 }
 
@@ -35,7 +35,7 @@
 	left: 0;
 	padding: 0;
 	outline: 0;
-	border-radius:4px !important;
+	border-radius:0px !important;
 }
 
 .ui-dialog .ui-dialog-titlebar {
@@ -69,8 +69,8 @@
 	padding: 0;
 	background: none;
 	overflow: auto;
-	background-color:#EDEBDB;
-	border-radius:4px !important;
+	background-color:#FFFFFF;
+	border-radius:0px !important;
 }
 
 .ui-dialog .ui-dialog-buttonpane {
@@ -103,7 +103,12 @@
 }
 
 
-
+.dialog_desc {
+    display: block;
+    float: left;
+    position: absolute;
+    text-indent: -999em;
+}
 
 
 
@@ -111,11 +116,11 @@
 
 	.dialog_header h1 {
 		line-height:20px;
-		padding:20px 0px 0px;
-		margin:0px 20px;
-		color:#6D3B6A;
+		padding:20px 20px 0px;
+		margin:0px 0px;
+		color:#454545;
 		font-size:1.6em;
-		text-align:center;
+		text-align:left;
 	}
 	
 	.dialog_close a.close_modal {
@@ -124,15 +129,14 @@
 		top:20px;
 		height:20px;
 		width:20px;
-		background: url(../images/icon_close_purple.png) center center / 14px 14px no-repeat;
+		background: url(../imgs/icon_close.png) center center no-repeat;
 		text-indent:-999em;
 		text-decoration:none;
 	}
 	
 	
 	.dialog_content {
-		padding:20px;
-		text-align:center;
+		padding:0px;
 	}
 	
 	.modal_content_padding {
@@ -141,11 +145,18 @@
 		max-height:400px;
 	}
 	
+		.modal_content_padding p {
+			line-height:20px;
+		}
+	
 .ui-dialog .form_container {
 	padding:10px 0px;
 }
 
 .form_actions {
+	padding:20px 0px;
+	margin: 0px 20px;
+	border-top:1px solid #999999;
 }
 
 	.form_action_left {
@@ -165,3 +176,15 @@
 		.form_action_right_inner {
 			margin-left:10px;
 		}
+		
+
+
+
+/* THIS IS NEEDED FOR THE ICONS TO BE RETINA READY */
+
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+
+.dialog_close a.close_modal {
+	background: url(../imgs/icon_close_x2.png) center center / 14px 14px no-repeat;
+}

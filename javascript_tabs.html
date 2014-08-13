@@ -19,8 +19,11 @@
 <link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css" />
 <link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css" />
 
+<link rel="stylesheet" type="text/css" href="css/responsive-nav.css" />
+
 <!-- Place any page specific CSS in here -->
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="css/responsive-tabs.css" />
 
 <!-- InstanceEndEditable -->
 </head>
@@ -29,13 +32,15 @@
 <body class="layout_center">
 <!-- InstanceEndEditable -->	
 
+
     <!-- Header & Navigation -->
 	<div class="page_container_outer nav">
 		<div class="page_container_inner clearfix">
 			<div class="brand left">
 				<a href="index.html"><img src="imgs/brand_x2.png" alt="Fontend Components Library" /></a>
 			</div>
-			<div class="nav_list right">
+            <button id="nav-toggle">Menu</button>
+			<div class="nav_list right" id="nav">
 				<ul>
 					<li><a href="page_templates.html">Page Templates</a></li>
 					<li><a href="html_elements.html">HTML Elements</a></li>
@@ -61,6 +66,52 @@
 		<div class="page_container_inner">
 			<!-- InstanceBeginEditable name="body_content" -->
             
+            <section>
+                <h3>Horizontal Tabs into drawers</h3>
+                
+                <div class="responsive-tabs horizontal_tabs clearfix">
+                    <h2>Tab 1</h2>
+                    <div class="responsive-tabs__panel--active">
+                        <h4>Tab 1 Content</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis orci eros, tincidunt in ligula vel, porttitor laoreet lorem. Sed pellentesque lorem consectetur, ultricies nisl ac, lobortis metus. Etiam laoreet adipiscing mauris, eu lobortis tortor hendrerit ac.</p>
+                        <p>Sed viverra vehicula felis a ornare. Etiam semper enim et neque mattis, eget vulputate ipsum tristique. Quisque blandit fermentum dictum. Nam placerat aliquet lectus, id vulputate magna blandit eu. Nulla sagittis felis ligula, ut tempus enim vehicula sed. Cras tortor risus, facilisis nec aliquam id, venenatis id nisi. Morbi sagittis placerat lectus, ut tristique turpis. Cras vel blandit ipsum, at bibendum purus. </p>
+                    </div>
+                    <h2>Tab 2</h2>
+                    <div>
+                        <h4>Tab 2 Content</h4>
+                        <p>Duis et commodo dui. Nam auctor sed mauris at tincidunt. Nulla facilisis lacus nec semper imperdiet. Aenean egestas cursus lorem, ut pulvinar augue sagittis id. Phasellus lacinia risus fermentum purus fermentum molestie. Nullam at venenatis est. Fusce at tellus mollis, cursus orci vitae, elementum neque. </p>
+                    </div>
+                    <h2>Tab 3</h2>
+                    <div>
+                        <h4>Tab 3 Content</h4>
+                        <p>Sed non euismod risus. Sed iaculis tortor ut dolor sodales, ut euismod turpis faucibus. Maecenas molestie tortor vitae sem pellentesque consequat. Aliquam quis magna ac mi tempor ultrices. Vivamus congue nibh ut ante venenatis facilisis. Cras viverra lectus eget sem tincidunt, at vehicula turpis pellentesque. Aenean porttitor neque et massa bibendum ultricies. Mauris at euismod quam. </p>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <section>
+                <h3>Vertical Tabs into drawers</h3>
+                
+                <div class="responsive-tabs vertical_tabs clearfix">
+                    <h2>Tab 1</h2>
+                    <div class="responsive-tabs__panel--active">
+                        <h4>Tab 1 Content</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis orci eros, tincidunt in ligula vel, porttitor laoreet lorem. Sed pellentesque lorem consectetur, ultricies nisl ac, lobortis metus. Etiam laoreet adipiscing mauris, eu lobortis tortor hendrerit ac.</p>
+                        <p>Sed viverra vehicula felis a ornare. Etiam semper enim et neque mattis, eget vulputate ipsum tristique. Quisque blandit fermentum dictum. Nam placerat aliquet lectus, id vulputate magna blandit eu. Nulla sagittis felis ligula, ut tempus enim vehicula sed. Cras tortor risus, facilisis nec aliquam id, venenatis id nisi. Morbi sagittis placerat lectus, ut tristique turpis. Cras vel blandit ipsum, at bibendum purus. </p>
+                    </div>
+                    <h2>Tab 2</h2>
+                    <div>
+                        <h4>Tab 2 Content</h4>
+                        <p>Duis et commodo dui. Nam auctor sed mauris at tincidunt. Nulla facilisis lacus nec semper imperdiet. Aenean egestas cursus lorem, ut pulvinar augue sagittis id. Phasellus lacinia risus fermentum purus fermentum molestie. Nullam at venenatis est. Fusce at tellus mollis, cursus orci vitae, elementum neque. </p>
+                    </div>
+                    <h2>Tab 3</h2>
+                    <div>
+                        <h4>Tab 3 Content</h4>
+                        <p>Sed non euismod risus. Sed iaculis tortor ut dolor sodales, ut euismod turpis faucibus. Maecenas molestie tortor vitae sem pellentesque consequat. Aliquam quis magna ac mi tempor ultrices. Vivamus congue nibh ut ante venenatis facilisis. Cras viverra lectus eget sem tincidunt, at vehicula turpis pellentesque. Aenean porttitor neque et massa bibendum ultricies. Mauris at euismod quam. </p>
+                    </div>
+                </div>
+            </section>
             <!-- InstanceEndEditable -->
 		</div>
 	</div>
@@ -78,10 +129,23 @@
 	<script type="text/javascript" src="js/vendor/jquery.customSelect.min.js"></script>
 	<script type="text/javascript" src="js/vendor/respond.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-
+    
+    <!-- Responsive Nav -->
+	<script type="text/javascript" language="javascript" src="js/nav/responsive-nav.js"></script>
+    <script type="text/javascript">
+		var navigation = responsiveNav("#nav", {
+			customToggle: "#nav-toggle"
+		});
+    </script>
+    
 	<!-- Custom Javascript specific to page -->
 	<!-- InstanceBeginEditable name="footer" -->
-    
+    <script type="text/javascript" src="js/vendor/responsiveTabs.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			RESPONSIVEUI.responsiveTabs();
+		})
+		</script>
     <!-- InstanceEndEditable -->
 
 </body>

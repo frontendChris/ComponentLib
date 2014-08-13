@@ -1,16 +1,39 @@
 @charset "UTF-8";
 /* CSS Document */
 
+input.btn_normal,
 .btn_normal {
 	width:auto;
-	background-color:#333333;
-	color:#FFFFFF;
+	background-color:transparent;
 	line-height:30px;
 	height:30px;
-	border:0px;
 	margin:0px;
 	padding:0px 10px;
 	overflow:visible;
 	border-radius:0px;
 	-webkit-appearance:none;
+	box-sizing:border-box;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:0.9em !important;
+}
+
+.btn_primary {
+	border:1px solid #454545;
+	color:#454545;
+}
+
+.btn_primary:hover {
+	border:1px solid #000000;
+	color:#000000;
+}
+
+.btn_secondary {
+	border:1px solid #999999;
+	color:#999999;
+}
+
+.btn_secondary:hover {
+	border:1px solid #757575;
+	color:#757575;
 }

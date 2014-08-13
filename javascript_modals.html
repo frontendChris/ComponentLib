@@ -19,6 +19,8 @@
 <link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css" />
 <link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css" />
 
+<link rel="stylesheet" type="text/css" href="css/responsive-nav.css" />
+
 <!-- Place any page specific CSS in here -->
 <!-- InstanceBeginEditable name="head" -->
 
@@ -29,13 +31,15 @@
 <body class="layout_center">
 <!-- InstanceEndEditable -->	
 
+
     <!-- Header & Navigation -->
 	<div class="page_container_outer nav">
 		<div class="page_container_inner clearfix">
 			<div class="brand left">
 				<a href="index.html"><img src="imgs/brand_x2.png" alt="Fontend Components Library" /></a>
 			</div>
-			<div class="nav_list right">
+            <button id="nav-toggle">Menu</button>
+			<div class="nav_list right" id="nav">
 				<ul>
 					<li><a href="page_templates.html">Page Templates</a></li>
 					<li><a href="html_elements.html">HTML Elements</a></li>
@@ -61,7 +65,7 @@
 		<div class="page_container_inner">
 			<!-- InstanceBeginEditable name="body_content" -->
             <h3>Modal Window</h3>
-			<button class="btn_normal" id="modal_full_launcher">Launch modal</button>
+			<button class="btn_normal btn_primary" id="modal_full_launcher">Launch modal</button>
             <!-- InstanceEndEditable -->
 		</div>
 	</div>
@@ -79,7 +83,15 @@
 	<script type="text/javascript" src="js/vendor/jquery.customSelect.min.js"></script>
 	<script type="text/javascript" src="js/vendor/respond.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-
+    
+    <!-- Responsive Nav -->
+	<script type="text/javascript" language="javascript" src="js/nav/responsive-nav.js"></script>
+    <script type="text/javascript">
+		var navigation = responsiveNav("#nav", {
+			customToggle: "#nav-toggle"
+		});
+    </script>
+    
 	<!-- Custom Javascript specific to page -->
 	<!-- InstanceBeginEditable name="footer" -->
     <!-- ****************************** -->
@@ -93,16 +105,30 @@
 			// init the modal window
 			$('#modal_full_launcher').click(function(){
 				$('.dialog').dialog({
-					modal: true
+					modal: true,
+					fluid: true, //new option
+					resizable: false,
+					show: { effect: "fade", duration: 500 },
+					width: 'auto', // overcomes width:'auto' and maxWidth bug
+					maxWidth: 600,
+					height: 'auto',
 				});
 				$('body').addClass('modal_visible');
+				
 			});
-
-			// If you click on the close modal button do the following
+			
+			// If you click on the X close modal button 
 			$(".close_modal").click(function(){
 				$(this).parent().parent().dialog('close');
 				$('body').removeClass('modal_visible');
 			});
+			
+			// If you click Cancel on a modal options. button or link must have class ".btn_cancel_modal"
+			$(".btn_cancel_modal").click(function(){
+				$('body').removeClass('modal_visible');
+				$(this).closest('.dialog_content').parent().dialog('close');
+			});
+			
 			
 			// If a modal is open and you press ESC then remove class off body
 			$(document).keyup(function(e) {
@@ -110,6 +136,42 @@
 					$('body').removeClass('modal_visible');
 				}
 			});
+			
+			// THIS IS WHAT HAPPENS WHEN YOU RESIZE YOUR SCREEN //
+			
+			// on window resize run function
+			$(window).resize(function () {
+				fluidDialog();
+			});
+			
+			// catch dialog if opened within a viewport smaller than the dialog width
+			$(document).on("dialogopen", ".ui-dialog", function (event, ui) {
+				fluidDialog();
+			});
+			
+			function fluidDialog() {
+				var $visible = $(".ui-dialog:visible");
+				// each open dialog
+				$visible.each(function () {
+					var $this = $(this);
+					var dialog = $this.find(".ui-dialog-content").data("ui-dialog");
+					// if fluid option == true
+					if (dialog.options.fluid) {
+						var wWidth = $(window).width();
+						// check window width against dialog width
+						if (wWidth < (parseInt(dialog.options.maxWidth) + 50))  {
+							// keep dialog from filling entire screen
+							$this.css("max-width", "300px");
+						} else {
+							// fix maxWidth bug
+							$this.css("max-width", dialog.options.maxWidth + "px");
+						}
+						//reposition dialog
+						dialog.option("position", dialog.options.position);
+					}
+				});
+
+			}
 		});
 	</script>
 
@@ -117,12 +179,20 @@
 	<!-- Standard Modal Window -->               
 	<div class="dialog" title="" role="dialog" aria-labelledby="title" aria-describedby="desc">
 		<div class="dialog_header">
-		    <h4 id="title">Modal Title</h4>
+		    <h1 id="title">Modal Title</h1>
 	    </div>
 	    <div id="desc" class="dialog_desc">Descriptive Text</div>
 	    <div class="dialog_content">
-	        ...
-	    </div>
+        	<div class="modal_content_padding">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis orci eros, tincidunt in ligula vel, porttitor laoreet lorem. Sed pellentesque lorem consectetur, ultricies nisl ac, lobortis metus. Etiam laoreet adipiscing mauris, eu lobortis tortor hendrerit ac.</p>
+                <p>Sed viverra vehicula felis a ornare. Etiam semper enim et neque mattis, eget vulputate ipsum tristique. Quisque blandit fermentum dictum. Nam placerat aliquet lectus, id vulputate magna blandit eu. Nulla sagittis felis ligula, ut tempus enim vehicula sed. Cras tortor risus, facilisis nec aliquam id, venenatis id nisi. Morbi sagittis placerat lectus, ut tristique turpis. Cras vel blandit ipsum, at bibendum purus. </p>
+            </div>
+            <div class="form_actions form_actions_modal">
+                <div class="form_action_left"><input type="button" class="btn_normal btn_secondary btn_cancel_modal" value="Cancel" id="btn_cancel" aria-label="Cancel the Action" /></div>
+                <div class="form_action_right"><input type="button" class="btn_normal btn_primary right" value="Continue" id="btn_continue" aria-label="Continue with the Action"  /></div>
+                <br class="clear"/>
+            </div>
+        </div>
 	    <div class="dialog_close">
 	        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
 	    </div>
