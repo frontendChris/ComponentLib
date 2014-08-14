@@ -64,7 +64,12 @@
 		
 		<div class="page_container_inner">
 			<!-- InstanceBeginEditable name="body_content" -->
-            
+            	<a href="javascript:void[0]" id="user_preferences" class="dd_link" title="User">Joseph Bloggs</a>
+                <div id="user_preferences_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="User Options Panel">
+                    <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close User Preferences">Close User Options Panel</a></div>
+                    <h3 class="color_1">User Options</h3>
+                </div>
+                    
             <!-- InstanceEndEditable -->
 		</div>
 	</div>
@@ -93,7 +98,57 @@
     
 	<!-- Custom Javascript specific to page -->
 	<!-- InstanceBeginEditable name="footer" -->
-    
+    <script type="text/javascript">
+		function dropdownContainers() {
+	
+			// If you click anywhere on the screen it closes any open options panels
+			$("html").on('click touchstart', function () {
+				$(".dd_option_panel").hide();
+				$('.dd_link').removeClass('active');
+			});
+			
+			// Stop the event for closing option panels when you click on the panel or a hyperlink to open a panel
+			$(".dd_option_panel, .dd_link").on('click touchstart', function (e) {
+				e.stopPropagation();
+			});
+			
+			 // esc
+			$(document).keyup(function(e) {
+				if (e.keyCode == 27) {
+					$(".dd_option_panel").hide();
+					$('.dd_link').removeClass('active');	
+				}  
+			});
+			
+			// Show and Hide the Options Panels
+			$('.dd_link').click(function() {
+				var selected_panel = ('#') + $(this).attr('id') + ('_options');
+				
+				if($(selected_panel).css('display') == 'none'){
+					// Remove Existing Active Styling and Apply to current Item
+					$('.dd_link').removeClass('active');
+					$(this).addClass('active');
+					// Hide exisiting open dropdowns and show selected one
+					$('.dd_option_panel').hide();
+					$(selected_panel).show();
+					// Set Focus to the close button within the options panel
+					$(selected_panel).children('.dd_close_panel').children('a').focus();
+				} else {
+					$(selected_panel).hide();
+					$('.dd_link').removeClass('active');
+				}
+			});
+			
+			// Close the options panel when you click the link
+			$(".dd_close_panel a").click(function() {
+				// Apply focus to the link associated with the panel
+				$(this).parent().parent().parent().children('a').focus();
+				$(this).parent().parent().parent().children('a').removeClass('active');
+				// Hide the panel when you click close
+				$(".dd_option_panel").hide();
+			});
+		};
+    </script>
     <!-- InstanceEndEditable -->
 
 </body>

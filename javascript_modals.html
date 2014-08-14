@@ -64,9 +64,18 @@
 		
 		<div class="page_container_inner">
 			<!-- InstanceBeginEditable name="body_content" -->
-            <h3>Modal Window</h3>
-			<button class="btn_normal btn_primary" id="modal_full_launcher">Launch modal</button>
-            <!-- InstanceEndEditable -->
+            <section>
+                <h3>Modal Window - Inline Content</h3>
+                <p>This Modal Dialog will load an inline div. It is responsive and will always be center aligned.</p>
+                <button class="btn_normal btn_primary" id="modal_inline">Launch Inline Modal</button>
+            </section>
+                        
+            <section>
+                <h3>Modal Window - iFrame Content</h3>
+                <p>This Modal Dialog will load an external page through an iframe.</p>
+                <button class="btn_normal btn_primary" id="modal_iframe">Launch iFrame Modal</button>
+            </section>
+			<!-- InstanceEndEditable -->
 		</div>
 	</div>
 
@@ -103,8 +112,8 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			// init the modal window
-			$('#modal_full_launcher').click(function(){
-				$('.dialog').dialog({
+			$('#modal_inline').click(function(){
+				$('#inline_dialog').dialog({
 					modal: true,
 					fluid: true, //new option
 					resizable: false,
@@ -114,8 +123,28 @@
 					height: 'auto',
 				});
 				$('body').addClass('modal_visible');
-				
 			});
+			
+			
+			
+			$("#modal_iframe").click(function () {
+				$("#iframe_dialog").dialog({modal: true,
+					fluid: true, //new option
+					resizable: false,
+					show: { effect: "fade", duration: 500 },
+					width: 'auto', // overcomes width:'auto' and maxWidth bug
+					maxWidth: 600,
+					height: 'auto',
+					open: function(ev, ui){
+						$('#myIframe').attr('src','http://www.frontend.com');
+					}
+				});
+				$('body').addClass('modal_visible');
+				return false;
+			});
+			
+			
+			
 			
 			// If you click on the X close modal button 
 			$(".close_modal").click(function(){
@@ -137,8 +166,8 @@
 				}
 			});
 			
-			// THIS IS WHAT HAPPENS WHEN YOU RESIZE YOUR SCREEN //
 			
+			// THIS IS WHAT HAPPENS WHEN YOU RESIZE YOUR SCREEN //
 			// on window resize run function
 			$(window).resize(function () {
 				fluidDialog();
@@ -170,14 +199,14 @@
 						dialog.option("position", dialog.options.position);
 					}
 				});
-
 			}
 		});
 	</script>
 
 
+<div style="display:none;">
 	<!-- Standard Modal Window -->               
-	<div class="dialog" title="" role="dialog" aria-labelledby="title" aria-describedby="desc">
+	<div id="inline_dialog" title="" role="dialog" aria-labelledby="title" aria-describedby="desc">
 		<div class="dialog_header">
 		    <h1 id="title">Modal Title</h1>
 	    </div>
@@ -197,6 +226,21 @@
 	        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
 	    </div>
 	</div>
+    
+    
+    <!-- iFrame Modal Window -->
+    <div id="iframe_dialog" title="" role="dialog" aria-labelledby="title" aria-describedby="desc">
+    	<div class="dialog_header">
+		    <h1 id="title">Modal Title</h1>
+	    </div>
+		<iframe id="myIframe" src="" height="400px" width="600px" frameborder="0" ></iframe>
+	    <div class="dialog_close">
+	        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+	    </div>
+	</div>
+</div>
+    
+    
     <!-- InstanceEndEditable -->
 
 </body>

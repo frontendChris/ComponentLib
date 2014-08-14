@@ -116,7 +116,7 @@
 
 	.dialog_header h1 {
 		line-height:20px;
-		padding:20px 20px 0px;
+		padding:20px;
 		margin:0px 0px;
 		color:#454545;
 		font-size:1.6em;
@@ -140,7 +140,7 @@
 	}
 	
 	.modal_content_padding {
-		padding:20px 20px 10px;
+		padding:0px 20px 10px;
 		overflow:auto;
 		max-height:400px;
 	}
