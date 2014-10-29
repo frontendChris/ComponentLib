@@ -1,8 +1,23 @@
 @charset "UTF-8";
 /* CSS Document */
 
+@media (min-width: 320px) and (max-width:479px) {
+	.icon_block li {
+		width: 50%;
+	}
+}
 
-@media (max-width:1023px) { 
+@media (min-width : 480px) and (max-width : 767px) {
+	.icon_block li {
+		width: 50%;
+	}
+}
+
+@media (min-width : 768px) and (max-width : 1119px) {}
+
+@media (min-width : 768px) and (max-width : 1023px) and (orientation : landscape) {}
+
+@media (max-width:1024px) { 
 	.layout_center .page_container_inner {
 		width: auto; /* change size as required by project */
 		margin: auto;
